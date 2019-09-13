@@ -1,14 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<script>
-
-</script>
 <div class="container">
     <div class="row justify-content-center">
-        <div id="game" class="col-md-8">
+        <div id="game" class="col-md-10">
             
         </div>
     </div>
+    <button id="button">click me!!!!!!!!!!!!!!!!!!</button>
 </div>
 @endsection

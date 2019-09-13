@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/board', 'HomeController@board');
+Route::get('/board', function () {
+    return view('playBoard');
+});
 
 Auth::routes();
 
