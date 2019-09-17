@@ -14,11 +14,12 @@ class AdminCheck
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle(Closure $next)
+    public function handle($request, Closure $next)
     {
         if(Auth::user()->userRights == false) {
-            return false;
+           return redirect("home");
         }
-        return $next;
+
+        return $next($request);
     }
 }
