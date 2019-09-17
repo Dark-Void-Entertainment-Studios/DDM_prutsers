@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<p>hoi</p>
+<p>username: {{ Auth::user()->name }}</p>
+<p>E-mail: {{ Auth::user()->email }}</p>
 
 @endsection
