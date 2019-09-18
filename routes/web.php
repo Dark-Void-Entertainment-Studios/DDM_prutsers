@@ -24,7 +24,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['adminCheck']], function(){
-    Route::get('/user', 'UserController@index');
+    Route::resource('admin', 'AdminController');
 });
 
 /*
