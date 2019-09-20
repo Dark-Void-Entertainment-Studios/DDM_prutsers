@@ -16,6 +16,12 @@
 
                     You are logged in!
                 </div>
+                <!-- <a href="/board" class="btn btn-default">Play</a> -->
+                <form action="/board" method="POST">
+                    <input type="checkbox" value="1"><span>big board</span>
+                    <input type="checkbox" value="0"><span>obstacles</span>
+                    <input type="submit">
+                </form>
             </div>
         </div>
     </div>

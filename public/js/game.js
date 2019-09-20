@@ -11,7 +11,7 @@ var button  = document.getElementById("button");
  * @param {*} a 
  */
 
-function makeBoard(a, random) {
+function makeBoard(a) {
     for (var rowCount = 0; rowCount < board[a][0]; rowCount++) {
         var row = document.createElement("div");
         row.setAttribute("class", "row");
@@ -27,16 +27,28 @@ function makeBoard(a, random) {
             row.appendChild(square);
         }
         game.appendChild(row);
-        if (obstacles) {
-            var b = randomSquare();
-                while (b == 0 || b == 18 ) {
-                    b = randomSquare();
-                }
-            var stone = document.getElementById("square_" + rowCount + "_" + b);
-            stone.style.backgroundImage = "url('img/stone.jpg')";
-            stone.style.backgroundSize  = "auto";
-            stone.setAttribute("onclick", "alert('You cannot place it here!')");
-        }
+        addObstacles(rowCount);
+    }
+}
+
+/**
+ * addObstacles
+ * 
+ * It adds obstacles to the board.
+ * 
+ * @param {*} a 
+ */
+
+function addObstacles(rowCount) {
+    if (obstacles) {
+        var b = randomSquare();
+            while (b == 0 || b == 18 ) {
+                b = randomSquare();
+            }
+        var stone = document.getElementById("square_" + rowCount + "_" + b);
+        stone.style.backgroundImage = "url('img/stone.jpg')";
+        stone.style.backgroundSize  = "auto";
+        stone.setAttribute("onclick", "alert('You cannot place a dice here!')");
     }
 }
 
@@ -45,11 +57,9 @@ function randomSquare() {
         return random;
 }
 
+makeBoard(0);
+
 function start() {
     makeBoard(0);
     button.style.display = "none";
 }
-
-(function init() {
-    button.onclick = function(){start();};
-})();
