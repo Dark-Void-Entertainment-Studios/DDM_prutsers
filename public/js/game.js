@@ -1,5 +1,6 @@
 var game    = document.getElementById("game");
 var board   = [[13, 19], [26, 19]];
+var obstacles    = true;
 var button  = document.getElementById("button");
 
 /**
@@ -22,15 +23,43 @@ function makeBoard(a) {
             square.style.width  = "50px";
             square.style.height = "50px";
             square.style.cssFloat = "right";
+            square.style.backgroundColor = "SaddleBrown ";
             row.appendChild(square);
         }
         game.appendChild(row);
+        addObstacles(rowCount);
     }
 }
+
+/**
+ * addObstacles
+ * 
+ * It adds obstacles to the board.
+ * 
+ * @param {*} a 
+ */
+
+function addObstacles(rowCount) {
+    if (obstacles) {
+        var b = randomSquare();
+            while (b == 0 || b == 18 ) {
+                b = randomSquare();
+            }
+        var stone = document.getElementById("square_" + rowCount + "_" + b);
+        stone.style.backgroundImage = "url('img/stone.jpg')";
+        stone.style.backgroundSize  = "auto";
+        stone.setAttribute("onclick", "alert('You cannot place a dice here!')");
+    }
+}
+
+function randomSquare() {
+    var random = Math.floor(Math.random() * 19);
+        return random;
+}
+
+makeBoard(0);
+
 function start() {
     makeBoard(0);
     button.style.display = "none";
 }
-(function init() {
-    button.onclick = function(){start();};
-})();
