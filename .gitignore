@@ -10,4 +10,8 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+<<<<<<< HEAD
 package-lock.json
+=======
+package-lock.json
+>>>>>>> 8231f64b772b07fc9b8128b014aa0f8b82d54948
