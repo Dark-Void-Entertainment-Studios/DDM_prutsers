@@ -7,7 +7,24 @@
                     <div class="card-header">admin board</div>
 
                     <div class="card-body">
-                        <p>admin</p>
+                        <table width="100%">
+                            <tr>
+                                <th>user</th>
+                                <th>status</th>
+                                <th>role</th>
+                                <th>edit</th>
+                                <th>delete</th>
+                            </tr>
+                            @foreach($users as $user)
+                                <tr>
+                                    <th>{{$user->name}}</th>
+                                    <th>W.I.P</th>
+                                    <th>{{$user->checkRole()}}</th>
+                                    <th><button>X</button></th>
+                                    <th><button>X</button></th>
+                                </tr>
+                            @endforeach
+                        </table>
                     </div>
                 </div>
             </div>
