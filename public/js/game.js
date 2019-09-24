@@ -1,17 +1,48 @@
 var game    = document.getElementById("game");
 var board   = [[13, 19], [26, 19]];
-var obstacles    = true;
-var button  = document.getElementById("button");
 
 /**
- * makeBoard
+ * changeUrlParameters()
  * 
- * Makes the playboard and can be set to play with 2 or 4 players.
- * 
- * @param {*} a 
+ * changes the Url hash into a boolean.
  */
 
-function makeBoard(a) {
+function changeUrlParameters() {
+    var hash = getUrlParameters();
+    if (hash.boardSize == 1) {
+        var a   = 1;
+    } else {
+        var a   = 0;
+    }
+    if (hash.obstacles == 1) {
+        var obstacles   = true;
+    } else {
+        var obstacles   = false;
+    }
+    makeBoard(a, obstacles)
+}
+
+function getUrlParameters() {
+    var pageParamString = unescape(window.location.search.substring(1));
+    var paramsArray = pageParamString.split('&');
+    var paramsHash = {};
+
+    for (var i = 0; i < paramsArray.length; i++)
+    {
+        var singleParam = paramsArray[i].split('=');
+        paramsHash[singleParam[0]] = singleParam[1];
+    }
+    console.log(paramsHash);
+    return paramsHash;
+}
+
+/**
+ * makeBoard()
+ * 
+ * Makes the playboard and can be set to play with 2 or 4 players.
+ */
+
+function makeBoard(a, obstacles) {
     for (var rowCount = 0; rowCount < board[a][0]; rowCount++) {
         var row = document.createElement("div");
         row.setAttribute("class", "row");
@@ -27,7 +58,7 @@ function makeBoard(a) {
             row.appendChild(square);
         }
         game.appendChild(row);
-        addObstacles(rowCount);
+        addObstacles(rowCount, obstacles);
     }
 }
 
@@ -35,11 +66,9 @@ function makeBoard(a) {
  * addObstacles
  * 
  * It adds obstacles to the board.
- * 
- * @param {*} a 
  */
 
-function addObstacles(rowCount) {
+function addObstacles(rowCount, obstacles) {
     if (obstacles) {
         var b = randomSquare();
             while (b == 0 || b == 18 ) {
@@ -56,10 +85,4 @@ function randomSquare() {
     var random = Math.floor(Math.random() * 19);
         return random;
 }
-
-makeBoard(0);
-
-function start() {
-    makeBoard(0);
-    button.style.display = "none";
-}
+changeUrlParameters()

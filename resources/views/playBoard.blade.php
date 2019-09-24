@@ -7,6 +7,5 @@
             
         </div>
     </div>
-    <!-- <button id="button">click me!!!!!!!!!!!!!!!!!!</button> -->
 </div>
 @endsection
