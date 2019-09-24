@@ -79,5 +79,6 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{ asset('js/game.js') }}" defer></script>
 </body>
 </html>

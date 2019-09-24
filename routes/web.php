@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/user', 'UserController@index');
+    Route::get('/board', 'GameController@index');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['adminCheck']], function(){
