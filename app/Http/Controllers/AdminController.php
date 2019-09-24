@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
-use App\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -15,9 +14,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = Admin::all();
 
-        return view('admin', compact("users"));
+        return view('admin/index', compact("users"));
     }
 
     /**
@@ -55,8 +54,8 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Admin  $admin
-     * @return \Illuminate\Http\Response
+     * @param Admin $admin
+     * @return void
      */
     public function edit(Admin $admin)
     {
@@ -84,5 +83,14 @@ class AdminController extends Controller
     public function destroy(Admin $admin)
     {
         //
+    }
+
+    public function makeAdmin($id)
+    {
+        $user = Admin::find($id);
+        $user->makeAdmin();
+        $user->save();
+
+        return redirect()->route("admin.index");
     }
 }

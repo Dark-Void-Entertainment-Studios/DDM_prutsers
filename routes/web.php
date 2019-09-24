@@ -23,13 +23,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/user', 'UserController@index');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ['adminCheck']], function(){
-    Route::resource('/', 'AdminController');
-});
-
-/*
-Route::prefix('admin')->group(function () {
-    Route::get('users', function () {
-        // Matches The "/admin/users" URL
-    });
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','adminCheck']], function(){
+    Route::resource('admin', 'AdminController');
+    Route::put('makeAdmin/{id}', 'AdminController@makeAdmin')->name('makeAdmin');
 });
