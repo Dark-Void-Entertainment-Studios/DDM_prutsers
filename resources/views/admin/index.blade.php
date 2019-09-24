@@ -39,15 +39,6 @@
                                             </form>
                                         </th>
                                     @endif
-                                    <th>
-                                        <form action="{{route('admin.destroy', $user->id)}}" method="post">
-                                            {{ csrf_field() }}
-                                            {{ method_field('DELETE') }}
-                                            <div class="col-auto">
-                                                <input type="submit" class="btn btn-primary" value="delete">
-                                            </div>
-                                        </form>
-                                    </th>
                                 </tr>
                             @endforeach
                         </table>
