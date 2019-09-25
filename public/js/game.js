@@ -32,7 +32,6 @@ function getUrlParameters() {
         var singleParam = paramsArray[i].split('=');
         paramsHash[singleParam[0]] = singleParam[1];
     }
-    console.log(paramsHash);
     return paramsHash;
 }
 
