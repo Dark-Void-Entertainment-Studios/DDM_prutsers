@@ -13,6 +13,10 @@ class GameController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         return view('board');
+=======
+        return view('playBoard');
+>>>>>>> HJM.Dev
     }
 }
