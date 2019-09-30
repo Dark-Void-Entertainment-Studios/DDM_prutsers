@@ -16,6 +16,8 @@ class CreateMonstersTable extends Migration
         Schema::create('monsters', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("name");
+            $table->integer("type")
+                ->default("0");
             $table->unsignedBigInteger("dice_id")
                 ->nullable();
             $table->timestamps();
