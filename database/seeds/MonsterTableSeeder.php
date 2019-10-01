@@ -12,47 +12,47 @@ class MonsterTableSeeder extends Seeder
     public function run()
     {
         DB::table('monsters')->insert([
-            'name' => "Dark magician",
+            'name' => "Dark Magician",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Blue-eyes white dragon",
+            'name' => "Blue-Eyes White Dragon",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Red-eyes black dragon",
+            'name' => "Red-Eyes Black Dragon",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Elemental hero neos",
+            'name' => "Elemental Hero Neos",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Twin long rods #1",
+            'name' => "Twin Long Rods #1",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Skull servant",
+            'name' => "Skull Servant",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Harpy lady",
+            'name' => "Harpy Lady",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Gaia the fierce knight",
+            'name' => "Gaia The Fierce Knight",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Celtic guardian",
+            'name' => "Celtic Guardian",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Baby dragon",
+            'name' => "Baby Dragon",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Gemini elf",
+            'name' => "Gemini Elf",
         ]);
 
         DB::table('monsters')->insert([
@@ -60,7 +60,7 @@ class MonsterTableSeeder extends Seeder
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Odd-eyes dragon",
+            'name' => "Odd-Eyes Dragon",
         ]);
 
         DB::table('monsters')->insert([
@@ -68,47 +68,47 @@ class MonsterTableSeeder extends Seeder
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Big shield gardna",
+            'name' => "Big Shield Gardna",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Man-eater bug",
+            'name' => "Man-Eater Bug",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Insect queen",
+            'name' => "Insect Queen",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Chaos emperor dragon - envoy of the end",
+            'name' => "Chaos Emperor Dragon - Envoy Of The End",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Aroma jar",
+            'name' => "Aroma Jar",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Toon mermaid",
+            'name' => "Toon Mermaid",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Dark rabbit",
+            'name' => "Dark Rabbit",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Gagaga magician",
+            'name' => "Gagaga Magician",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Mataion the timelord",
+            'name' => "Mataion The Timelord",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Speedroid tri-eyed dice",
+            'name' => "Speedroid Tri-Eyed Dice",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Manga ryu-ran",
+            'name' => "Manga Ryu-Ran",
         ]);
 
         DB::table('monsters')->insert([
@@ -116,15 +116,15 @@ class MonsterTableSeeder extends Seeder
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Junk syncron",
+            'name' => "Junk Syncron",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Time wizard",
+            'name' => "Time Wizard",
         ]);
 
         DB::table('monsters')->insert([
-            'name' => "Dark magician girl",
+            'name' => "Dark Magician Girl",
         ]);
     }
 }
