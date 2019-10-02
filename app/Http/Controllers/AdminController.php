@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
+use App\Monster;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -46,9 +47,14 @@ class AdminController extends Controller
      * @param  \App\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(Admin $admin)
+    public function show()
     {
-        //
+        $dice = [1, [2, 1, 3 ,5 , 2, 2]];
+        $values = ['normal', '1', '2', '3', '4'];
+        $monster1 = new Monster($values[0], $values[1], $values[2], $values[3], $values[4], $dice );
+        $monster2 = new Monster("normal", 4, 10, 5, 15, $dice);
+        dd($monster1, $monster2);
+
     }
 
     /**

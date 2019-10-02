@@ -5,11 +5,12 @@ namespace App;
 
 class Dice
 {
-    protected $pattrn;
-    protected $sides;
+    private $pattrn;
+    private $sides;
 
-    public function __construct($test) {
-        $this->pattrn = $getRandomPattrn();
+    public function __construct($pattrn, $sides) {
+        $this->pattrn = $pattrn;
+        $this->sides = $sides;
     }
 
 }

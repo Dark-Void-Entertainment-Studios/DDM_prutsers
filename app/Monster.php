@@ -2,20 +2,25 @@
 
 namespace App;
 
-class Monster extends Dice
+class Monster
 {
-    protected $dice;
-    protected $level;
-    protected $atk;
-    protected $def;
-    protected $hp;
+    private $name;
+    private $level;
+    private $atk;
+    private $def;
+    private $hp;
+    private $effect;
 
-    public function __construct(array $attributes = ['dice', 'level', 'atk', 'def', 'hp'])
+    public function __construct($name, $level, $atk, $def, $hp)
     {
-       $this->dice = $attributes['dice'];
-       $this->level = $attributes['level'];
-       $this->atk = $attributes['atk'];
-       $this->def = $attributes['def'];
-       $this->hp = $attributes['hp'];
+       $this->name = $name;
+       $this->level = $level;
+       $this->atk = $atk;
+       $this->def = $def;
+       $this->hp = $hp;
+    }
+
+    public function attacked($dam) {
+        //
     }
 }

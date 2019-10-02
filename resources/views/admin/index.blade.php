@@ -5,7 +5,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">admin board</div>
-
+                    <a href={{route('admin.show', 1)}}>monster test</a>
                     <div class="card-body">
                         <table width="100%">
                             <tr>
