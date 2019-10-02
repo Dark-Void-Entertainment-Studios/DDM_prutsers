@@ -18,7 +18,7 @@ class Monster
        $this->atk = $atk;
        $this->def = $def;
        $this->hp = $hp;
-       $this->effect $effect;
+       $this->effect = $effect;
     }
 
     public function attacked($dam) {
