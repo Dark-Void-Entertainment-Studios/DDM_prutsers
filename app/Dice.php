@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 class Dice
 {
     private $pattrn;

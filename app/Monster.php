@@ -11,13 +11,14 @@ class Monster
     private $hp;
     private $effect;
 
-    public function __construct($name, $level, $atk, $def, $hp)
+    public function __construct($name, $level, $atk, $def, $hp, $effect)
     {
        $this->name = $name;
        $this->level = $level;
        $this->atk = $atk;
        $this->def = $def;
        $this->hp = $hp;
+       $this->effect $effect;
     }
 
     public function attacked($dam) {
