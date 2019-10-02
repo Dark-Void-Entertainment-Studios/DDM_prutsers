@@ -50,7 +50,11 @@ class AdminController extends Controller
      */
     public function show()
     {
+<<<<<<< refs/remotes/origin/TK.Dev
         $dark = new Jinzo();
+=======
+        $dark = new Bitron();
+>>>>>>> add
         dd($dark);
 
     }

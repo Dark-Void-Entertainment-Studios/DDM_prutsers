@@ -24,5 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+        $dark = new Bitron();
+        dd($dark);
     }
 }
