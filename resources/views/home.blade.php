@@ -8,18 +8,13 @@
 
 <ul class="flex-container">
     <li class="flex-item-3">
-    @if (Auth::check())
-        <div class="alert alert-success" role="alert">
-        You are logged in!
-        </div>
-    @endif
         <input type="image" id="playGame" src="../public/image/blue_eyes.png" alt="DDM" width="200px" height="200px">
     </li>
     </li>
 
     <li class="flex-item-1">       
         <div class="slideShow">
-            <img class="slideImage" src="../public/image/angela.png">
+            <img class="slideImage" src="{{ asset('image/angela.png') }}" defer> 
             <img class="slideImage" src="../public/image/soon.png">
             <img class="slideImage" src="../public/image/soon.png">
             <img class="slideImage" src="../public/image/soon.png">

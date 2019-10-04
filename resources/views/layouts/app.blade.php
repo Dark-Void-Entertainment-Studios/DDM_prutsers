@@ -22,7 +22,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -56,13 +56,21 @@
                             @endif
                         @else
                             <ul class="customNav">
-                                <li><a href="#">Homepage</a></li>
+                                <li><a href="/home">Homepage</a></li>
                                 <li><a href="/lobby">Play</a></li>
                                 <li><a href="#">Deck</a></li>
                                 <li><a href="#">Rules</a></li>    
                                 <li><a href="#">Ranking</a></li>  
-                                <li><a href="#">Help</a></li>      
-                            </ul>                  
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                                 <div id="loginCheck">
+                                    @if (Auth::check())
+                                        <div class="alert alert-success" role="alert">
+                                            <p> You are logged in! </p>
+                                        </div>
+                                    @endif     
+                                </div>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret" style="z-index: 9;"></span>

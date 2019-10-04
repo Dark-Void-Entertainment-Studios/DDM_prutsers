@@ -6,8 +6,7 @@
         <div class="col-md-12">
             <div class="card">
             <section class="col-md-8">
-            <h3>join</h3>
-
+                <h3>join</h3>
             </section>
             <section class="col-md-8">
             <h3>lobbies</h3>
@@ -32,7 +31,7 @@
                         <option value="3">3 min</option>
                     </select>
                 </div>
-                    <input class="btn btn-default" type="submit" value="Play">
+                    <input class="btn btn-default bg-light" type="submit" value="Play">
             </form>
             </section>
             </div>
