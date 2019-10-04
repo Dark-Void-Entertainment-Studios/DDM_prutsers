@@ -8,12 +8,14 @@
     <div class="row justify-content-center">
         <aside class="col-md-1">
             <div id="player1"></div>
+            <button id="endTurn" class="" onclick="timer.reset(1)">end turn</button>
         </aside>
         <div id="game" class="col-md-10">
             
         </div>
         <aside class="col-md-1">
             <div id="player2"></div>
+            <button id="endTurn" class="" onclick="timer.reset(1)">end turn</button>
         </aside>
     </div>
 </div>
