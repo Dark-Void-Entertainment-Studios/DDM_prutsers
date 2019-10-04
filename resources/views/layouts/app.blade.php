@@ -13,6 +13,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/game.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -56,8 +57,9 @@
                         @else
                             <ul class="customNav">
                                 <li><a href="#">Homepage</a></li>
+                                <li><a href="/lobby">Play</a></li>
                                 <li><a href="#">Deck</a></li>
-                                <li><a href="#">Game</a></li>    
+                                <li><a href="#">Rules</a></li>    
                                 <li><a href="#">Ranking</a></li>  
                                 <li><a href="#">Help</a></li>      
                             </ul>                  
@@ -92,5 +94,6 @@
             @yield('content')
         </main>
     </div>
+    
 </body>
 </html>

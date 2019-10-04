@@ -4,11 +4,15 @@
 
 <title>Dungeon Dice</title>
 
-<link rel="stylesheet" type="text/css" href="../public/css/style.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <ul class="flex-container">
     <li class="flex-item-3">
+    @if (Auth::check())
+        <div class="alert alert-success" role="alert">
+        You are logged in!
+        </div>
+    @endif
         <input type="image" id="playGame" src="../public/image/blue_eyes.png" alt="DDM" width="200px" height="200px">
     </li>
     </li>

@@ -15,21 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/user', 'UserController@index');
+    Route::get('/board', 'GameController@index');
+    Route::get('/lobby', 'LobbyController@index');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['adminCheck']], function(){
     Route::get('/user', 'UserController@index');
-});
-
-/*
-Route::prefix('admin')->group(function () {
-    Route::get('users', function () {
-        // Matches The "/admin/users" URL
-    });
 });
