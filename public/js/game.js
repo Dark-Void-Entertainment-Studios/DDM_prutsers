@@ -100,6 +100,25 @@ function addPlayers() {
     startTurn();
 }
 
+// function startTimer(duration, display) {
+//     var timer = duration, minutes, seconds;
+//     setInterval(function () {
+//         minutes = parseInt(timer / 60, 10)
+//         seconds = parseInt(timer % 60, 10);
+
+//         minutes = minutes < 0 ? "0" + minutes : minutes;
+//         seconds = seconds < 10 ? "0" + seconds : seconds;
+
+//         display.textContent = minutes + ":" + seconds;
+        
+
+//         if (--timer < 0) {
+//             andTurn();
+//             timer = duration;
+//         }
+//     }, 1000);
+// }
+
 function _timer(callback)
 {
     var time = 0;     //  The default time of the timer
@@ -157,6 +176,25 @@ function _timer(callback)
         $('p.timer span.minute').html(minute);
     }
 }
+ 
+// example use
+ 
+// $(document).ready(function(e) 
+// {
+//     timer = new _timer
+//     (
+//         function(time)
+//         {
+//             if(time == 0)
+//             {
+//                 timer.stop();
+//                 alert('time out');
+//             }
+//         }
+//     );
+//     timer.reset(0);
+//     timer.mode(0);
+// });
 
 function startTurn() {
     var hash = getUrlParameters();
@@ -167,6 +205,11 @@ function startTurn() {
     } else {
         var turnTime = 180;
     }
+    var endButton = document.createElement("button");
+    endButton.setAttribute("id", "endButton");
+    endButton.innerHTML = "end turn";
+    endButton.setAttribute("onclick", "timer.reset(1)");
+    player1.appendChild(endButton);
     console.log(turnTime);
     var time = turnTime;
     $(document).ready(function(e) 
@@ -177,7 +220,7 @@ function startTurn() {
             {
                 if(time == 0)
                 {
-                    nextTurn();
+                    andTurn();
                     timer.reset(turnTime);
                 }
             }
@@ -187,13 +230,23 @@ function startTurn() {
     });
 }
 
-function nextTurn() {
-    var endTurn = document.getElementById("endTurn");
-    endTurn.classList.toggle("?");
-    var turn = 1;
-    turn++
+function andTurn() {
     console.log("next turn");
+    var endButton = document.getElementById("endButton");
+    player1.removeChild(endButton);
+    nextTurn();
+}
+
+function nextTurn() {
+    var endButton = document.createElement("button");
+    endButton.setAttribute("id", "endButton");
+    endButton.innerHTML = "end turn";
+    endButton.setAttribute("onclick", "timer.reset(1)");
+    player2.appendChild(endButton);
 }
 
 changeUrlParameters()
 addPlayers()
+// startTurn()
+
+
