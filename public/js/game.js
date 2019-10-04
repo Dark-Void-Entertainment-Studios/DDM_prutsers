@@ -172,8 +172,8 @@ function _timer(callback)
         second = (second < 10) ? '0'+second : second;
         minute = (minute < 0) ? '0'+minute : minute;
         
-        $('div.timer span.second').html(second);
-        $('div.timer span.minute').html(minute);
+        $('p.timer span.second').html(second);
+        $('p.timer span.minute').html(minute);
     }
 }
  
@@ -199,18 +199,19 @@ function _timer(callback)
 function startTurn() {
     var hash = getUrlParameters();
     if (hash.time == 1) {
-        var time = 60;
+        var turnTime = 60;
     } else if (hash.time == 2) {
-        var time = 120;
+        var turnTime = 120;
     } else {
-        var time = 180;
+        var turnTime = 180;
     }
     var endButton = document.createElement("button");
     endButton.setAttribute("id", "endButton");
     endButton.innerHTML = "end turn";
-    endButton.setAttribute("onclick", "andTurn()");
+    endButton.setAttribute("onclick", "timer.reset(1)");
     player1.appendChild(endButton);
-    console.log(time);
+    console.log(turnTime);
+    var time = turnTime;
     $(document).ready(function(e) 
     {
         timer = new _timer
@@ -219,8 +220,8 @@ function startTurn() {
             {
                 if(time == 0)
                 {
-                    timer.stop();
-                    alert('time out');
+                    andTurn();
+                    timer.reset(turnTime);
                 }
             }
         );
@@ -236,13 +237,13 @@ function andTurn() {
     nextTurn();
 }
 
-// function nextTurn() {
-//     var endButton = document.createElement("button");
-//     endButton.setAttribute("id", "endButton");
-//     endButton.innerHTML = "end turn";
-//     endButton.setAttribute("onclick", "andTurn()");
-//     player2.appendChild(endButton);
-// }
+function nextTurn() {
+    var endButton = document.createElement("button");
+    endButton.setAttribute("id", "endButton");
+    endButton.innerHTML = "end turn";
+    endButton.setAttribute("onclick", "timer.reset(1)");
+    player2.appendChild(endButton);
+}
 
 changeUrlParameters()
 addPlayers()
