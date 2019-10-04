@@ -25,11 +25,11 @@
                     <label for="board">obstacles</label>
                 </div>
                 <div class="form-group">
-                <label for="board">time</label>
+                    <label for="board">time</label>
                     <select class="form-control" name="time" id="time">
-                        <option value="60">1 min</option>
-                        <option value="120">2 min</option>
-                        <option value="180">3 min</option>
+                        <option value="1">1 min</option>
+                        <option value="2">2 min</option>
+                        <option value="3">3 min</option>
                     </select>
                 </div>
                     <input class="btn btn-default" type="submit" value="Play">
