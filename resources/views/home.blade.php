@@ -8,16 +8,16 @@
 
 <ul class="flex-container">
     <li class="flex-item-3">
-        <input type="image" id="playGame" src="../public/image/blue_eyes.png" alt="DDM" width="200px" height="200px">
+        <input type="image" id="playGame" src="image/blue_eyes.png" alt="DDM" width="200px" height="200px">
     </li>
     </li>
 
     <li class="flex-item-1">       
         <div class="slideShow">
-            <img class="slideImage" src="{{ asset('image/angela.png') }}" defer> 
-            <img class="slideImage" src="../public/image/soon.png">
-            <img class="slideImage" src="../public/image/soon.png">
-            <img class="slideImage" src="../public/image/soon.png">
+            <img class="slideImage" src="image/angela.png"> 
+            <img class="slideImage" src="image/soon.png">
+            <img class="slideImage" src="image/soon.png">
+            <img class="slideImage" src="image/soon.png">
             <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
         </div>
