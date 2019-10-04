@@ -100,25 +100,6 @@ function addPlayers() {
     startTurn();
 }
 
-// function startTimer(duration, display) {
-//     var timer = duration, minutes, seconds;
-//     setInterval(function () {
-//         minutes = parseInt(timer / 60, 10)
-//         seconds = parseInt(timer % 60, 10);
-
-//         minutes = minutes < 0 ? "0" + minutes : minutes;
-//         seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//         display.textContent = minutes + ":" + seconds;
-        
-
-//         if (--timer < 0) {
-//             andTurn();
-//             timer = duration;
-//         }
-//     }, 1000);
-// }
-
 function _timer(callback)
 {
     var time = 0;     //  The default time of the timer
@@ -176,25 +157,6 @@ function _timer(callback)
         $('p.timer span.minute').html(minute);
     }
 }
- 
-// example use
- 
-// $(document).ready(function(e) 
-// {
-//     timer = new _timer
-//     (
-//         function(time)
-//         {
-//             if(time == 0)
-//             {
-//                 timer.stop();
-//                 alert('time out');
-//             }
-//         }
-//     );
-//     timer.reset(0);
-//     timer.mode(0);
-// });
 
 function startTurn() {
     var hash = getUrlParameters();
@@ -245,8 +207,5 @@ function nextTurn() {
     player2.appendChild(endButton);
 }
 
-changeUrlParameters()
-addPlayers()
-// startTurn()
-
-
+changeUrlParameters();
+addPlayers();
