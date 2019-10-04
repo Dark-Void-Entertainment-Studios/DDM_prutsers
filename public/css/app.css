@@ -4350,7 +4350,11 @@ input[type=button].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 0px;
+}
+
+.navbarDropdown {
+  z-index: 9999;
 }
 
 .navbar > .container,
@@ -8377,7 +8381,7 @@ button.bg-dark:focus {
 
 .pt-4,
 .py-4 {
-  padding-top: 1.5rem !important;
+  padding-top: 0px !important;
 }
 
 .pr-4,
