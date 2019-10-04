@@ -172,8 +172,8 @@ function _timer(callback)
         second = (second < 10) ? '0'+second : second;
         minute = (minute < 0) ? '0'+minute : minute;
         
-        $('div.timer span.second').html(second);
-        $('div.timer span.minute').html(minute);
+        $('p.timer span.second').html(second);
+        $('p.timer span.minute').html(minute);
     }
 }
  
@@ -208,7 +208,7 @@ function startTurn() {
     var endButton = document.createElement("button");
     endButton.setAttribute("id", "endButton");
     endButton.innerHTML = "end turn";
-    endButton.setAttribute("onclick", "andTurn()");
+    endButton.setAttribute("onclick", "timer.reset(1)");
     player1.appendChild(endButton);
     console.log(turnTime);
     var time = turnTime;
@@ -220,8 +220,7 @@ function startTurn() {
             {
                 if(time == 0)
                 {
-                    console.log(turnTime);
-                    alert('time out');
+                    andTurn();
                     timer.reset(turnTime);
                 }
             }
@@ -238,13 +237,13 @@ function andTurn() {
     nextTurn();
 }
 
-// function nextTurn() {
-//     var endButton = document.createElement("button");
-//     endButton.setAttribute("id", "endButton");
-//     endButton.innerHTML = "end turn";
-//     endButton.setAttribute("onclick", "andTurn()");
-//     player2.appendChild(endButton);
-// }
+function nextTurn() {
+    var endButton = document.createElement("button");
+    endButton.setAttribute("id", "endButton");
+    endButton.innerHTML = "end turn";
+    endButton.setAttribute("onclick", "timer.reset(1)");
+    player2.appendChild(endButton);
+}
 
 changeUrlParameters()
 addPlayers()

@@ -2,12 +2,8 @@
 
 @section('content')
 <div class="container">
-    <!-- <p id="time" class="row justify-content-center" data=""></p> -->
-    <div class="timer">
-            <span class="minute">00</span>:<span class="second">10</span>
-        </div>
+    <p id="time" class="row justify-content-center timer"><span class="minute">00</span>:<span class="second">10</span></p>
         <div class="control">
-            <button onClick="timer.reset(1)">Reset</button>
         </div>
     <div class="row justify-content-center">
         <aside class="col-md-1">
