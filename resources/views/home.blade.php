@@ -18,20 +18,20 @@
                 </div>
                 <!-- <a href="/board" class="btn btn-default">Play</a> -->
                 <form action="/board">
-                <div class="form-group">
+                <div class="form-check">
                     <input class="btn btn-default" type="checkbox" name="boardSize" value="1">
-                    <label for="board">big board</label>
+                    <label for="board">four player board</label>
                 </div>
-                <div class="form-group">
+                <div class="form-check">
                     <input class="btn btn-default" type="checkbox" name="obstacles" value="1">
                     <label for="board">obstacles</label>
                 </div>
                 <div class="form-group">
                 <label for="board">time</label>
-                    <select name="time" id="time">
-                        <option value="30">1 min</option>
-                        <option value="60">2 min</option>
-                        <option value="120">3 min</option>
+                    <select class="form-control" name="time" id="time">
+                        <option value="1">1 min</option>
+                        <option value="2">2 min</option>
+                        <option value="3">3 min</option>
                     </select>
                 </div>
                     
