@@ -15,6 +15,6 @@ class RedEyesBlackDragon extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Red-Eyes Black Dragon", 3, 20, 20, 20);
+        parent::__construct("Red-Eyes Black Dragon", 3, 20, 20, 20,"none");
     }
 }

@@ -15,6 +15,6 @@ class GaiaTheFierceKnight extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Gaia The Fierce Knight", 3, 30, 10, 20);
+        parent::__construct("Gaia The Fierce Knight", 3, 30, 10, 20, "none");
     }
 }

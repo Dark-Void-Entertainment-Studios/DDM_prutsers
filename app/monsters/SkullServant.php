@@ -15,6 +15,6 @@ class SkullServant extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Skull Servant", 1, 20, 10, 10);
+        parent::__construct("Skull Servant", 1, 20, 10, 10,"none");
     }
 }

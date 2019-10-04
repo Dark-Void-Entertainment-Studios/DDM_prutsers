@@ -8,20 +8,10 @@ use App\Monster;
 
 class InsectQueen extends Monster
 {
-    private $name = "Insect Queen";
-    private $level = 3;
-    private $atk = 30;
-    private $def = 20;
-    private $hp = 30;
-    private $effect = "Gain attack for every different tier monster you control";
+
     public function __construct()
     {
-       $this->name = $name;
-       $this->level = $level;
-       $this->atk = $atk;
-       $this->def = $def;
-       $this->hp = $hp;
-       $this->effect = $effect;
-       parent::__construct($name, $level, $atk, $def, $hp, $effect);
+
+       parent::__construct("Insect Queen", 3, 30, 20, 30, "Gain attack for every different tier monster you control");
     }
 }
