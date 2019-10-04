@@ -15,6 +15,6 @@ class ElementalHeroNeos extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Elemental HERO Neos", 2, 10, 10, 30);
+        parent::__construct("Elemental HERO Neos", 2, 10, 10, 30, "none");
     }
 }

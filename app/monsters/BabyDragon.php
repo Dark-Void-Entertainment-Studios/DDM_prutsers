@@ -15,6 +15,6 @@ class BabyDragon extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Baby Dragon", 1, 10, 10, 20);
+        parent::__construct("Baby Dragon", 1, 10, 10, 20, "none");
     }
 }

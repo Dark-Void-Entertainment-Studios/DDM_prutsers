@@ -15,6 +15,6 @@ class TwinLongRods extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Twin Long Rods #1", 1, 20, 10, 10);
+        parent::__construct("Twin Long Rods #1", 1, 20, 10, 10,"none");
     }
 }

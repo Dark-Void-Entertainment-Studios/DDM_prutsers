@@ -15,6 +15,6 @@ class GeminiElf extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Gemini Elf", 1, 10, 20, 10);
+        parent::__construct("Gemini Elf", 1, 10, 20, 10, "none");
     }
 }

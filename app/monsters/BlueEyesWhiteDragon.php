@@ -15,6 +15,6 @@ class BlueEyesWhiteDragon extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Blue-Eyes White Dragon", 3, 20, 10, 30);
+        parent::__construct("Blue-Eyes White Dragon", 3, 20, 10, 30, "none");
     }
 }

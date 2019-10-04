@@ -15,6 +15,6 @@ class HarpieLady extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Harpy Lady", 2, 20, 10, 20);
+        parent::__construct("Harpy Lady", 2, 20, 10, 20, "none");
     }
 }

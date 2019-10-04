@@ -15,6 +15,6 @@ class CelticGuardian extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Celtic Guardian", 1, 10, 20, 10);
+        parent::__construct("Celtic Guardian", 1, 10, 20, 10, "none");
     }
 }
