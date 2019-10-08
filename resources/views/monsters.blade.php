@@ -6,30 +6,29 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Dashboard</div>
-                    <div class="card-body">
-                        <div class="container">
-                            <img src="img/aitsu.png" alt="">
-                            <div>
-                                {{$dark->__get('name')}}
-                                {{$dark->__get('level')}}
-                                {{$dark->__get('hp')}}
-                                {{$dark->__get('atk')}}
-                                {{$dark->__get('def')}}
-                                {{$dark->__get('effect')}}
-                            </div>
-
+                    <div class="card-body text-center">
+                        <div class="imageContainer">
+                            <img class="image rounded" src="img/aitsu.png" alt="">
+                            <p class="overlay">
+                                {{$dark->__get('name')}},
+                                Level ({{$dark->__get('level')}}),
+                                Hp ({{$dark->__get('hp')}}),
+                                Attack ({{$dark->__get('atk')}}),
+                                Defence ({{$dark->__get('def')}}),
+                                Effect: {{$dark->__get('effect')}}
+                            </p>
                         </div>
 
-                        <div class="view overlay">
-                            <img class="img-fluid "  src="img/aromajar.png" alt="">
-                            <div class="mask flex-center rgba-red-strong">
-                                {{$light->__get('name')}}
-                                {{$light->__get('level')}}
-                                {{$light->__get('hp')}}
-                                {{$light->__get('atk')}}
-                                {{$light->__get('def')}}
-                                {{$light->__get('effect')}}
-                            </div>
+                        <div class="imageContainer">
+                            <img class="image rounded"  src="img/aromajar.png" alt="">
+                            <p class="overlay">
+                                {{$light->__get('name')}},
+                                Level ({{$light->__get('level')}}),
+                                Hp ({{$light->__get('hp')}}),
+                                Attack ({{$light->__get('atk')}}),
+                                Defence ({{$light->__get('def')}}),
+                                Effect: {{$light->__get('effect')}}
+                            </p>
                         </div>
                     </div>
                 </div>
