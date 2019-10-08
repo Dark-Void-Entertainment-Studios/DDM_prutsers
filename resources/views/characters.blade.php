@@ -1,43 +1,71 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+                <div class="card-header">You can select your character here!</div>
+                <!-- <a href="/home" class="btn btn-default">Select</a> -->
+                <form action="/home" class="text-center">
+                <div class="container">
+                    <img src="img/Yuma Tsukumo.png" class="image rounded">
+                    <div class="overlay">{{$characters[10]->name}}</div>
+                </div>  
+                <div class="container">
+                    <img src="img/Artificial Intelligence (A.I.).png" class="image rounded">
+                    <div class="overlay">{{$characters[0]->name}}</div>
+                </div> 
+                <div class="container"> 
+                    <img src="img/Yugo.png" class="image rounded">
+                    <div class="overlay">{{$characters[9]->name}}</div>
+                </div>  
+                <div class="container">
+                    <img src="img/Z-one.png" class="image rounded">
+                    <div class="overlay">{{$characters[13]->name}}</div>
+                </div>  
+                <div class="container">
+                    <img src="img/Yugi Muto.png" class="image rounded">
+                    <div class="overlay">{{$characters[8]->name}}</div>
+                </div> 
+                <div class="container"> 
+                    <img src="img/Jaden Yuki.png" class="image rounded">
+                    <div class="overlay">{{$characters[1]->name}}</div>
                 </div>
-                <!-- <a href="/board" class="btn btn-default">Play</a> -->
-                <form action="/board">
-                <div class="form-group">
-                    <input class="btn btn-default" type="checkbox" name="boardSize" value="1">
-                    <label for="board">big board</label>
+                <div class="container"> 
+                    <img src="img/Ruff Ruff McDogg.png" class="image rounded">
+                    <div class="overlay">{{$characters[5]->name}}</div>
+                </div> 
+                <div class="container">
+                    <img src="img/Maximillion Pegasus.png" class="image rounded">
+                    <div class="overlay">{{$characters[4]->name}}</div>
+                </div>  
+                <div class="container">
+                    <img src="img/Yusaku Fujiki.png" class="image rounded">
+                    <div class="overlay">{{$characters[11]->name}}</div>
                 </div>
-                <div class="form-group">
-                    <input class="btn btn-default" type="checkbox" name="obstacles" value="1">
-                    <label for="board">obstacles</label>
+                <div class="container"> 
+                    <img src="img/Joey Wheeler.png" class="image rounded">
+                    <div class="overlay">{{$characters[2]->name}}</div>
                 </div>
-                <div class="form-group">
-                <label for="board">time</label>
-                    <select name="time" id="time">
-                        <option value="30">1 min</option>
-                        <option value="60">2 min</option>
-                        <option value="120">3 min</option>
-                    </select>
+                <div class="container"> 
+                    <img src="img/Téa Gardner.png" class="image rounded">
+                    <div class="overlay">{{$characters[7]->name}}</div>
+                </div> 
+                <div class="container"> 
+                    <img src="img/Yusei Fudo.png" class="image rounded">
+                    <div class="overlay">{{$characters[12]->name}}</div>
+                </div> 
+                <div class="container"> 
+                    <img src="img/Seto Kaiba.png" class="image rounded">
+                    <div class="overlay">{{$characters[6]->name}}</div>
                 </div>
-                    
-                    <input class="btn btn-default" type="submit" value="Play">
+                <div class="container">
+                    <img src="img/Mai Valentine.png" class="image rounded">
+                    <div class="overlay">{{$characters[3]->name}}</div>
+                </div> 
+                    <input class="btn btn-default" type="submit" value="Select">
                 </form>
-            </div>
         </div>
     </div>
 </div>
