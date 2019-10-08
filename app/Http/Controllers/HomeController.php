@@ -32,6 +32,12 @@ class HomeController extends Controller
         $dark = new aitsu();
         $light = new AromaJar();
 
+        
+
+        dd($test);
+
         return view('monsters', compact("dark", "light"));
     }
+
+
 }
