@@ -1,8 +1,11 @@
 var game    = document.getElementById("game");
 var player1 = document.getElementById("player1");
 var player2 = document.getElementById("player2");
+var endButton1 = document.getElementById("endButton1");
+var endButton2 = document.getElementById("endButton2");
 var board   = [[13, 19], [26, 19]];
 var players = [["player1", 3],["player2", 3]];
+var turnCount = 0;
 var timer;
 var time;
 
@@ -158,6 +161,10 @@ function _timer(callback)
     }
 }
 
+function isOdd(num) {
+    return num % 2;
+}
+
 function startTurn() {
     var hash = getUrlParameters();
     if (hash.time == 1) {
@@ -167,11 +174,9 @@ function startTurn() {
     } else {
         var turnTime = 180;
     }
-    var endButton = document.createElement("button");
-    endButton.setAttribute("id", "endButton");
-    endButton.innerHTML = "end turn";
-    endButton.setAttribute("onclick", "timer.reset(1)");
-    player1.appendChild(endButton);
+    endButton1.setAttribute("onclick", "timer.reset(1)");
+    endButton2.setAttribute("onclick", "timer.reset(1)");
+    endButton2.style.display = "none";
     console.log(turnTime);
     var time = turnTime;
     $(document).ready(function(e) 
@@ -182,8 +187,9 @@ function startTurn() {
             {
                 if(time == 0)
                 {
-                    andTurn();
+                    nextTurn();
                     timer.reset(turnTime);
+                    turnCount++;
                 }
             }
         );
@@ -192,19 +198,14 @@ function startTurn() {
     });
 }
 
-function andTurn() {
-    console.log("next turn");
-    var endButton = document.getElementById("endButton");
-    player1.removeChild(endButton);
-    nextTurn();
-}
-
 function nextTurn() {
-    var endButton = document.createElement("button");
-    endButton.setAttribute("id", "endButton");
-    endButton.innerHTML = "end turn";
-    endButton.setAttribute("onclick", "timer.reset(1)");
-    player2.appendChild(endButton);
+    if (isOdd(turnCount)) {
+        endButton2.style.display = "none";
+        endButton1.style.display = "inline";
+    } else {
+        endButton1.style.display = "none";
+        endButton2.style.display = "inline";
+    }
 }
 
 changeUrlParameters();
