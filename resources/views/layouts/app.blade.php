@@ -44,7 +44,7 @@
                         <!-- Authentication Links -->
                         @guest
                         <header class="header-container">
-                            <li><a href="#">Homepage</a></li>
+                            <li><a href="/home">Homepage</a></li>
                             <li><a href="#">Ranking</a></li>
                             <li><a href="#">Help</a></li>
                             <li class="nav-item">

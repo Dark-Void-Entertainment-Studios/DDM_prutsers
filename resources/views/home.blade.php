@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <ul class="flex-container">
-    <li class="flex-item-3">
+    <li class="flex-item-3"><a href="/lobby">
         <input type="image" id="playGame" src="image/blue_eyes.png" alt="DDM" width="200px" height="200px">
-    </li>
+    </a></li>
     </li>
 
     <li class="flex-item-1">       
