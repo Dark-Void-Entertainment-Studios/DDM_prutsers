@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name("home");
 
-Route::get('/test', 'HomeController@test');
+Route::get('/monsters', 'HomeController@monsters');
+route::get('/monster/{id}', 'HomeController@MonsterShow')->name('monster');
 
 Auth::routes(['verify' => true]);
 

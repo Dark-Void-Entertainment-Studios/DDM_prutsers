@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use HaydenPierce\ClassFinder\ClassFinder;
 use Illuminate\Http\Request;
-use App\Monsters\Aitsu;
-use App\Monsters\AromaJar;
 
 class HomeController extends Controller
 {
@@ -28,7 +26,8 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function test()
+
+    public function monsters()
     {
         $monsterClasses = ClassFinder::getClassesInNamespace('App\Monsters');
 
@@ -42,5 +41,15 @@ class HomeController extends Controller
         return view('monsters', compact("monsters"));
     }
 
+    public function monsterShow($id)
+    {
+        $monsterClasses = ClassFinder::getClassesInNamespace('App\Monsters');
+
+        $monster = new $monsterClasses[$id];
+
+        //dd($monster);
+
+        return view('monsterShow', compact('monster'));
+    }
 
 }
