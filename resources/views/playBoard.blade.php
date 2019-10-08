@@ -7,13 +7,17 @@
         </div>
     <div class="row justify-content-center">
         <aside class="col-md-1">
-            <div id="player1"></div>
+            <div id="player1">
+                <button id="endButton1">end turn</button>
+            </div>
         </aside>
         <div id="game" class="col-md-10">
             
         </div>
         <aside class="col-md-1">
-            <div id="player2"></div>
+            <div id="player2">
+                <button id="endButton2">end turn</button>
+            </div>
         </aside>
     </div>
 </div>
