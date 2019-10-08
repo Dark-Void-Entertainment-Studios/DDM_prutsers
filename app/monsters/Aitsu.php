@@ -15,6 +15,6 @@ class Aitsu extends Monster
 {
     public function __construct()
     {
-        parent::__construct("Aitsu", 1, 20, 10, 10, "none", 'img/aitsu.png');
+        parent::__construct("Aitsu", 1, 20, 10, 10, "none");
     }
 }
