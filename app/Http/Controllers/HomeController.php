@@ -30,8 +30,8 @@ class HomeController extends Controller
     public function test()
     {
         $dark = new aitsu();
-        $like = new AromaJar();
+        $light = new AromaJar();
 
-        return view('monsters', compact("dark", "like"));
+        return view('monsters', compact("dark", "light"));
     }
 }
