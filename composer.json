@@ -11,6 +11,7 @@
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.3",
+        "haydenpierce/class-finder": "^0.4.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0"
     },
@@ -38,7 +39,8 @@
         },
         "classmap": [
             "database/seeds",
-            "database/factories"
+            "database/factories",
+            "app/Monsters"
         ]
     },
     "autoload-dev": {

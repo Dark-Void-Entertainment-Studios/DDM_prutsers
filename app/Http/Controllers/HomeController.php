@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use HaydenPierce\ClassFinder\ClassFinder;
 use Illuminate\Http\Request;
 use App\Monsters\Aitsu;
 use App\Monsters\AromaJar;
@@ -32,7 +33,14 @@ class HomeController extends Controller
         $dark = new aitsu();
         $light = new AromaJar();
 
-        
+        $monsters = ClassFinder::getClassesInNamespace('App\Monsters');
+
+        $test = [];
+
+        foreach ($monsters as $monster) {
+            $a = new $monster;
+            array_push($test, $a);
+        }
 
         dd($test);
 

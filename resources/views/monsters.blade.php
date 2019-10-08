@@ -20,7 +20,7 @@
                         </div>
 
                         <div class="imageContainer">
-                            <img class="image rounded"  src="img/aromajar.png" alt="">
+                            <img class="image rounded" src="img/aromajar.png" alt="">
                             <p class="overlay">
                                 {{$light->__get('name')}},
                                 Level ({{$light->__get('level')}}),
