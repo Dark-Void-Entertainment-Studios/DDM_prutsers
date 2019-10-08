@@ -21,6 +21,7 @@ class Monster
        $this->hp = $hp;
        $this->effect = $effect;
        $name = str_replace(" ", "", $name);
+       $name = str_replace("#1", "", $name);
        $this->imgPath = "img/". $name . ".png" ;
     }
 
