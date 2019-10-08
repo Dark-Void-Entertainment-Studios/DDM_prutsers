@@ -55,6 +55,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{route('monsters')}}">Monsters</a>
                                     @if(Auth::user()->userRights == 1)
                                         <a class="dropdown-item" href="{{route('admin.index')}}">admin</a>
                                     @endif
