@@ -16,7 +16,6 @@
 
                     You are logged in!
                 </div>
-                <!-- <a href="/board" class="btn btn-default">Play</a> -->
                 <form action="/board">
                 <div class="form-check">
                     <input class="btn btn-default" type="checkbox" name="boardSize" value="1">
