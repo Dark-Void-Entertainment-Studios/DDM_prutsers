@@ -30,21 +30,16 @@ class HomeController extends Controller
     }
     public function test()
     {
-        $dark = new aitsu();
-        $light = new AromaJar();
+        $monsterClasses = ClassFinder::getClassesInNamespace('App\Monsters');
 
-        $monsters = ClassFinder::getClassesInNamespace('App\Monsters');
+        $monsters = [];
 
-        $test = [];
-
-        foreach ($monsters as $monster) {
+        foreach ($monsterClasses as $monster) {
             $a = new $monster;
-            array_push($test, $a);
+            array_push($monsters, $a);
         }
 
-        dd($test);
-
-        return view('monsters', compact("dark", "light"));
+        return view('monsters', compact("monsters"));
     }
 
 

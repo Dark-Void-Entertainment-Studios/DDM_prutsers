@@ -10,8 +10,9 @@ class Monster
     private $def;
     private $hp;
     private $effect;
+    private $imgPath;
 
-    public function __construct($name, $level, $atk, $def, $hp, $effect = "N/A")
+    public function __construct($name, $level, $atk, $def, $hp, $effect = "N/A", $img = "N/A")
     {
        $this->name = $name;
        $this->level = $level;
@@ -19,6 +20,7 @@ class Monster
        $this->def = $def;
        $this->hp = $hp;
        $this->effect = $effect;
+       $this->imgPath = $img;
     }
 
     public function __get($item)

@@ -7,29 +7,19 @@
                 <div class="card">
                     <div class="card-header">Dashboard</div>
                     <div class="card-body text-center">
+                        @foreach($monsters as $monster)
                         <div class="imageContainer">
-                            <img class="image rounded" src="img/aitsu.png" alt="">
+                            <img class="image rounded" src="{{$monster->__get('imgPath')}}" alt="">
                             <p class="overlay">
-                                {{$dark->__get('name')}},
-                                Level ({{$dark->__get('level')}}),
-                                Hp ({{$dark->__get('hp')}}),
-                                Attack ({{$dark->__get('atk')}}),
-                                Defence ({{$dark->__get('def')}}),
-                                Effect: {{$dark->__get('effect')}}
+                                {{$monster->__get('name')}},
+                                Level ({{$monster->__get('level')}}),
+                                Hp ({{$monster->__get('hp')}}),
+                                Attack ({{$monster->__get('atk')}}),
+                                Defence ({{$monster->__get('def')}}),
+                                Effect: {{$monster->__get('effect')}}
                             </p>
                         </div>
-
-                        <div class="imageContainer">
-                            <img class="image rounded" src="img/aromajar.png" alt="">
-                            <p class="overlay">
-                                {{$light->__get('name')}},
-                                Level ({{$light->__get('level')}}),
-                                Hp ({{$light->__get('hp')}}),
-                                Attack ({{$light->__get('atk')}}),
-                                Defence ({{$light->__get('def')}}),
-                                Effect: {{$light->__get('effect')}}
-                            </p>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
