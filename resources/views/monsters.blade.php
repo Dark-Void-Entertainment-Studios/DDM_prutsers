@@ -9,12 +9,27 @@
                     <div class="card-body">
                         <div class="container">
                             <img src="img/aitsu.png" alt="">
-                            {{$dark->__get('name')}}
+                            <div>
+                                {{$dark->__get('name')}}
+                                {{$dark->__get('level')}}
+                                {{$dark->__get('hp')}}
+                                {{$dark->__get('atk')}}
+                                {{$dark->__get('def')}}
+                                {{$dark->__get('effect')}}
+                            </div>
+
                         </div>
 
-                        <div class="container">
-                            <img src="img/aromajar.png" alt="">
-                            {{$light->__get('name')}}
+                        <div class="view overlay">
+                            <img class="img-fluid "  src="img/aromajar.png" alt="">
+                            <div class="mask flex-center rgba-red-strong">
+                                {{$light->__get('name')}}
+                                {{$light->__get('level')}}
+                                {{$light->__get('hp')}}
+                                {{$light->__get('atk')}}
+                                {{$light->__get('def')}}
+                                {{$light->__get('effect')}}
+                            </div>
                         </div>
                     </div>
                 </div>
