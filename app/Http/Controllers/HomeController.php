@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Monster;
+use App\Monsters\Aitsu;
+use App\Monster\AromaJar;
 
 class HomeController extends Controller
 {
@@ -24,7 +27,12 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
-        $dark = new Bitron();
+    }
+    public function test()
+    {
+        $dark = new aitsu();
         dd($dark);
+        $like = new AromaJar();
+        dd($like);
     }
 }
