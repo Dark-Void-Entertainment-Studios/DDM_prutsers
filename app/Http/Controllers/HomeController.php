@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Monster;
 use App\Monsters\Aitsu;
-use App\Monster\AromaJar;
+use App\Monsters\AromaJar;
 
 class HomeController extends Controller
 {
@@ -31,8 +30,8 @@ class HomeController extends Controller
     public function test()
     {
         $dark = new aitsu();
-        dd($dark);
         $like = new AromaJar();
-        dd($like);
+
+        return view('monsters', compact("dark", "like"));
     }
 }

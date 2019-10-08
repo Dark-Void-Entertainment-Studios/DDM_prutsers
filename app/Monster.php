@@ -21,6 +21,11 @@ class Monster
        $this->effect = $effect;
     }
 
+    public function __get($item)
+    {
+       return $this->$item;
+    }
+
     public function attacked($dam) {
         //
     }
