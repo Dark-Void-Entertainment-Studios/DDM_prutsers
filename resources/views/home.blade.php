@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <ul class="flex-container">
-    <li class="flex-item-3">
+    <li class="flex-item-3"><a href="/lobby">
         <input type="image" id="playGame" src="image/blue_eyes.png" alt="DDM" width="200px" height="200px">
-    </li>
+    </a></li>
     </li>
 
     <li class="flex-item-1">       
@@ -38,6 +38,7 @@
             Level 3 monsters have two crests, Level 4 monsters have one crest.
             Some crests have a number inside them, indicating their amount.
             Monsters inside the dice have an ATK number, DEF number and some have special abilities.
+        <a href="https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_Dungeon_Dice_Monsters">more info</a>
         </p>
     </li>
     <li class="flex-item-1">
