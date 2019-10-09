@@ -64,13 +64,7 @@
                                 <li><a href="#">Ranking</a></li>  
                                 <li><a href="#">Help</a></li>
                             </ul>
-                                 <div id="loginCheck">
-                                    @if (Auth::check())
-                                        <div class="alert alert-success" role="alert">
-                                            <p> You are logged in! </p>
-                                        </div>
-                                    @endif     
-                                </div>
+
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
