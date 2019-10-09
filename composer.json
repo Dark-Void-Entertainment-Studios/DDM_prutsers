@@ -39,8 +39,7 @@
         },
         "classmap": [
             "database/seeds",
-            "database/factories",
-            "app/Monsters"
+            "database/factories"
         ]
     },
     "autoload-dev": {
