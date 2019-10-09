@@ -587,6 +587,29 @@ pre code {
   margin-left: auto;
 }
 
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
 
 .container-fluid {
   width: 100%;
@@ -4327,11 +4350,7 @@ input[type=button].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0px;
-}
-
-.navbarDropdown {
-  z-index: 9999;
+  padding: 0.5rem 1rem;
 }
 
 .navbar > .container,
@@ -4723,7 +4742,6 @@ input[type=button].btn-block {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 25px;
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
@@ -8359,7 +8377,7 @@ button.bg-dark:focus {
 
 .pt-4,
 .py-4 {
-  padding-top: 0px !important;
+  padding-top: 1.5rem !important;
 }
 
 .pr-4,
@@ -10624,5 +10642,38 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.imageContainer {
+  position: relative;
+  width: 50%;
+  max-width: 172px;
+  padding: 0%;
+  display: inline-block;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+}
+
+.imageContainer:hover .overlay {
+  opacity: 1;
 }
 
