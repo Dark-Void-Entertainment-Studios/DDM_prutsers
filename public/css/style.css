@@ -28,6 +28,10 @@ body {
 #alert{
 
 }
+.navbar{
+	background-color: black;
+	border-radius: 25px;
+}
 
 .content{
 	background-color: black;
@@ -74,7 +78,9 @@ body {
 	height: 100%;
 }
 
-
+.containerheader{
+	background-color: black;
+}
 
 #logo{;
 }
@@ -135,11 +141,6 @@ body {
 }
 .container {
    width: 100%;
-   margin: 0;
-   padding: 0;
-   background-color: black;
-   top: 0;
-   left: 0;
 }
 
 .break {
@@ -159,6 +160,7 @@ body {
   z-index: -1;
   position: relative;	
   margin: 20px;
+  background-color: black;
 }
 
 .flex-item-3 {
@@ -173,6 +175,7 @@ body {
   background-image: url(../image/cards.png);
   position: relative;	
     margin: 20px;
+
 }
 
 .flex-layer{
@@ -194,6 +197,7 @@ body {
   border-radius: 25px;
   z-index: -1;
     margin: 20px;
+   background-color: black;
 }
 .flex-text {
 	color: white;
@@ -209,9 +213,8 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  background-color: black;
-  opacity: 0.95;
-
+	background-image: url(../image/background2.jpg); 
+	opacity: 0.99;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
