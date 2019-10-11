@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div id="playboard" class="container">
     <p id="time" class="row justify-content-center timer"><span class="minute">00</span>:<span class="second">10</span></p>
         <div class="control">
         </div>
