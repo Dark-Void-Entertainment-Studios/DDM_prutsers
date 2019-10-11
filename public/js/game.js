@@ -9,12 +9,6 @@ var turnCount = 0;
 var timer;
 var time;
 
-/**
- * changeUrlParameters()
- * 
- * changes the Url hash into a boolean.
- */
-
 function changeUrlParameters() {
     var hash = getUrlParameters();
     if (hash.boardSize == 1) {
@@ -43,12 +37,6 @@ function getUrlParameters() {
     return paramsHash;
 }
 
-/**
- * makeBoard()
- * 
- * Makes the playboard and can be set to play with 2 or 4 players.
- */
-
 function makeBoard(a, obstacles, time) {
     for (var rowCount = 0; rowCount < board[a][0]; rowCount++) {
         var row = document.createElement("div");
@@ -68,12 +56,6 @@ function makeBoard(a, obstacles, time) {
         addObstacles(rowCount, obstacles); 
     }
 }
-
-/**
- * addObstacles
- * 
- * It adds obstacles to the board.
- */
 
 function addObstacles(rowCount, obstacles) {
     if (obstacles) {
@@ -102,25 +84,6 @@ function addPlayers() {
     player2.appendChild(name);
     startTurn();
 }
-
-// function startTimer(duration, display) {
-//     var timer = duration, minutes, seconds;
-//     setInterval(function () {
-//         minutes = parseInt(timer / 60, 10)
-//         seconds = parseInt(timer % 60, 10);
-
-//         minutes = minutes < 0 ? "0" + minutes : minutes;
-//         seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//         display.textContent = minutes + ":" + seconds;
-        
-
-//         if (--timer < 0) {
-//             andTurn();
-//             timer = duration;
-//         }
-//     }, 1000);
-// }
 
 function _timer(callback)
 {
@@ -179,25 +142,6 @@ function _timer(callback)
         $('p.timer span.minute').html(minute);
     }
 }
- 
-// example use
- 
-// $(document).ready(function(e) 
-// {
-//     timer = new _timer
-//     (
-//         function(time)
-//         {
-//             if(time == 0)
-//             {
-//                 timer.stop();
-//                 alert('time out');
-//             }
-//         }
-//     );
-//     timer.reset(0);
-//     timer.mode(0);
-// });
 
 function isOdd(num) {
     return num % 2;
@@ -249,5 +193,3 @@ function nextTurn() {
 changeUrlParameters()
 addPlayers()
 // startTurn()
-
-
