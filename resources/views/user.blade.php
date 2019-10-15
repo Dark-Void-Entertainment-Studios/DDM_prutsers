@@ -2,10 +2,10 @@
 @section('content')
 
 <section id="userInfo">
-<h3>User info</h3>
-<p>Username: {{ Auth::user()->name }}</p>
-<p>E-mail: {{ Auth::user()->email }}</p>
-<p>friends? if you have those</p>
+	<h3>User info</h3>
+	<p>Username: {{ Auth::user()->name }}</p>
+	<p>E-mail: {{ Auth::user()->email }}</p>
+	<p>friends? if you have those</p>
 </section>
 
 <section id="rankings">
