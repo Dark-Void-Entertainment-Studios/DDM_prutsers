@@ -23,11 +23,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<<<<<<< HEAD
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-=======
     <link href="{{ asset('css/character.css') }}" rel="stylesheet">
->>>>>>> IS.Dev
 </head>
 <body>
     <div id="app">

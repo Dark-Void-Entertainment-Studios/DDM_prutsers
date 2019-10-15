@@ -25,19 +25,12 @@ Auth::routes(['verify' => true]);
 Route::middleware(['auth'])->group(function () {
     Route::get('/user', 'UserController@index');
     Route::get('/board', 'GameController@index');
-<<<<<<< HEAD
     Route::get('/lobby', 'LobbyController@index');
-=======
->>>>>>> IS.Dev
     Route::get('/characters', 'CharacterController@index');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['adminCheck']], function(){
     Route::get('/user', 'UserController@index');
-<<<<<<< HEAD
     Route::resource('admin', 'AdminController');
     Route::put('makeAdmin/{id}', 'AdminController@makeAdmin')->name('makeAdmin');
 });
-=======
-});
->>>>>>> IS.Dev
