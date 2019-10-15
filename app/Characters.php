@@ -2,9 +2,22 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Characters extends Model
+class Characters
 {
-    protected $table = 'characters';
+    private $name;
+    private $effect;
+    private $imgPath;
+
+    public function __construct($name, $effect)
+    {
+        $this->name = $name;
+        $this->effect = $effect;
+
+        $this->imgPath = "img/". $name . ".png" ;
+    }
+
+    public function __get($item)
+    {
+        return $this->$item;
+    }
 }

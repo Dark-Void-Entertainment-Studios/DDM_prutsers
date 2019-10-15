@@ -47,8 +47,6 @@ class HomeController extends Controller
 
         $monster = new $monsterClasses[$id];
 
-        //dd($monster);
-
         return view('monsterShow', compact('monster'));
     }
 
