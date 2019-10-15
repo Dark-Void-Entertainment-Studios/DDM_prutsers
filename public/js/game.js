@@ -89,7 +89,7 @@ function addObstacles(rowCount, obstacles) {
                 b = randomSquare();
             }
         var stone = document.getElementById("square_" + rowCount + "_" + b);
-        stone.style.backgroundImage = "url('img/stone.jpg')";
+        stone.style.backgroundImage = "url('img/stone.png')";
         stone.style.backgroundSize  = "auto";
         stone.setAttribute("onclick", "alert('You cannot place a dice here!')");
     }
