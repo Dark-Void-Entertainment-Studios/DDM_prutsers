@@ -209,8 +209,8 @@ nav{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-	background-image: url(../image/background2.jpg); 
-	opacity: 0.99;
+  background-image: url(../image/background2.jpg); 
+  opacity: 0.99;
   background-color: black;
   opacity: 0.95;
   display: -webkit-box;
@@ -220,4 +220,5 @@ nav{
   display: flex;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+  color: blue;
 }
