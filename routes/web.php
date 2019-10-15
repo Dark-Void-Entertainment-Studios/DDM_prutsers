@@ -14,30 +14,24 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/monsters', 'HomeController@monsters')->name('monsters');
 route::get('/monster/{id}', 'HomeController@MonsterShow')->name('monster');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
-
 Auth::routes(['verify' => true]);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/user', 'UserController@index');
     Route::get('/board', 'GameController@index');
-<<<<<<< HEAD
-=======
     Route::get('/lobby', 'LobbyController@index');
->>>>>>> development
     Route::get('/characters', 'CharacterController@index');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['adminCheck']], function(){
     Route::get('/user', 'UserController@index');
-<<<<<<< HEAD
-});
-=======
     Route::resource('admin', 'AdminController');
     Route::put('makeAdmin/{id}', 'AdminController@makeAdmin')->name('makeAdmin');
 });
->>>>>>> development
+

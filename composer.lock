@@ -2952,7 +2952,6 @@
         },
         {
             "name": "facade/flare-client-php",
-<<<<<<< HEAD
             "version": "1.1.1",
             "source": {
                 "type": "git",
@@ -2963,18 +2962,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/facade/flare-client-php/zipball/608c2be3157b09f1868ca97ea4ddf3434ee83d63",
                 "reference": "608c2be3157b09f1868ca97ea4ddf3434ee83d63",
-=======
-            "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/facade/flare-client-php.git",
-                "reference": "7128b251b48f24ef64e5cddd7f8d40cc3a06fd3e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/facade/flare-client-php/zipball/7128b251b48f24ef64e5cddd7f8d40cc3a06fd3e",
-                "reference": "7128b251b48f24ef64e5cddd7f8d40cc3a06fd3e",
->>>>>>> development
                 "shasum": ""
             },
             "require": {
@@ -3015,7 +3002,6 @@
                 "flare",
                 "reporting"
             ],
-<<<<<<< HEAD
             "time": "2019-10-07T19:15:46+00:00"
         },
         {
@@ -3030,32 +3016,12 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/facade/ignition/zipball/862cbc2dfffa1fa28b47822a116e5b2e03b421db",
                 "reference": "862cbc2dfffa1fa28b47822a116e5b2e03b421db",
-=======
-            "time": "2019-09-11T14:19:56+00:00"
-        },
-        {
-            "name": "facade/ignition",
-            "version": "1.8.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/facade/ignition.git",
-                "reference": "4ff9397a24da58b35382802e2d22325b640123ea"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/4ff9397a24da58b35382802e2d22325b640123ea",
-                "reference": "4ff9397a24da58b35382802e2d22325b640123ea",
->>>>>>> development
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-mbstring": "*",
-<<<<<<< HEAD
                 "facade/flare-client-php": "^1.1",
-=======
-                "facade/flare-client-php": "^1.0.4",
->>>>>>> development
                 "facade/ignition-contracts": "^1.0",
                 "filp/whoops": "^2.4",
                 "illuminate/support": "~5.5.0 || ~5.6.0 || ~5.7.0 || ~5.8.0 || ^6.0",
@@ -3107,11 +3073,7 @@
                 "laravel",
                 "page"
             ],
-<<<<<<< HEAD
             "time": "2019-10-13T10:42:06+00:00"
-=======
-            "time": "2019-09-20T09:37:06+00:00"
->>>>>>> development
         },
         {
             "name": "facade/ignition-contracts",
@@ -4119,7 +4081,6 @@
         },
         {
             "name": "phpunit/phpunit",
-<<<<<<< HEAD
             "version": "8.4.1",
             "source": {
                 "type": "git",
@@ -4130,18 +4091,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/366a4a0f2b971fd43b7c351d621e8dd7d7131869",
                 "reference": "366a4a0f2b971fd43b7c351d621e8dd7d7131869",
-=======
-            "version": "8.3.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "302faed7059fde575cf3403a78c730c5e3a62750"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/302faed7059fde575cf3403a78c730c5e3a62750",
-                "reference": "302faed7059fde575cf3403a78c730c5e3a62750",
->>>>>>> development
                 "shasum": ""
             },
             "require": {
@@ -4211,11 +4160,7 @@
                 "testing",
                 "xunit"
             ],
-<<<<<<< HEAD
             "time": "2019-10-07T12:57:41+00:00"
-=======
-            "time": "2019-09-14T09:12:03+00:00"
->>>>>>> development
         },
         {
             "name": "scrivo/highlight.php",
