@@ -8,6 +8,8 @@ var players = [["player1", 3],["player2", 3]];
 var turnCount = 0;
 var timer;
 var time;
+var colourPlayer1 = "blue";
+var colourPlayer2 = "red";
 
 /**
  * changeUrlParameters()
@@ -61,12 +63,17 @@ function makeBoard(a, obstacles, time) {
             square.style.width  = "50px";
             square.style.height = "50px";
             square.style.cssFloat = "right";
-            square.style.backgroundColor = "SaddleBrown ";
+            square.style.backgroundColor = "SaddleBrown";
             row.appendChild(square);
         }
         game.appendChild(row);
         addObstacles(rowCount, obstacles); 
     }
+    var centerRow = Math.floor(rowCount / 2);
+    var startPlayer1 = document.getElementById("square_" + centerRow + "_0");
+    var startPlayer2 = document.getElementById("square_" + centerRow + "_18");
+    startPlayer1.style.backgroundColor = colourPlayer1;
+    startPlayer2.style.backgroundColor = colourPlayer2;
 }
 
 /**
@@ -177,7 +184,6 @@ function startTurn() {
     endButton1.setAttribute("onclick", "timer.reset(1)");
     endButton2.setAttribute("onclick", "timer.reset(1)");
     endButton2.style.display = "none";
-    console.log(turnTime);
     var time = turnTime;
     $(document).ready(function(e) 
     {
@@ -185,11 +191,16 @@ function startTurn() {
         (
             function(time)
             {
-                if(time == 0)
-                {
+                var myTimer = document.getElementById("timer");
+                if (time == 0) {
                     nextTurn();
                     timer.reset(turnTime);
+                    myTimer.style.color = "white";
+                    myTimer.style.fontWeight = "normal";
                     turnCount++;
+                } else if (time <= 10) {
+                    myTimer.style.color = "red";
+                    myTimer.style.fontSize = "bold";
                 }
             }
         );
