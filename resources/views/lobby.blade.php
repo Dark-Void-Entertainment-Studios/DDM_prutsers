@@ -31,6 +31,15 @@
                         <option value="3">3 min</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="board"> buffer time</label>
+                    <select class="form-control" name=" bufferTime" id="bufferTime">
+                        <option value="0">off</option>
+                        <option value="1">1 min</option>
+                        <option value="2">2 min</option>
+                        <option value="3">3 min</option>
+                    </select>
+                </div>
                     <input class="btn btn-default bg-light" type="submit" value="Play">
             </form>
             </section>
