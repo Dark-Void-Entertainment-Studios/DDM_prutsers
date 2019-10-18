@@ -231,7 +231,8 @@ body {
 	margin: auto;
 	margin-bottom: 20px;
 	border-radius: 12px;
-	padding: 10px 0px;
+	padding: 20px 0px;
+	height: 80px;
 }
 
 #left {
