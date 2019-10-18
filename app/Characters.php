@@ -13,6 +13,10 @@ class Characters
         $this->name = $name;
         $this->effect = $effect;
 
+        $this->setImage($name);
+    }
+
+    private function setImage($name) {
         $this->imgPath = "img/". $name . ".png" ;
     }
 
