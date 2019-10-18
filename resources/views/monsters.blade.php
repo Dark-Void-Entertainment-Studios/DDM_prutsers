@@ -11,14 +11,14 @@
                             <div class="carousel-inner row" role="listbox">
                                 @foreach($monsters as $key => $monster)
                                     @if($loop->first)
-                                        <div class="carousel-item active col-md-4">
+                                        <div class="carousel-item col-md-4 active">
                                     @else
                                         <div class="carousel-item col-md-4">
                                     @endif
                                         <a href="{{route('monster', $key)}}">
-                                            <div class="imageContainer">
-                                                <img class="image rounded" src="{{$monster->__get('imgPath')}}" alt="">
-                                                <p class="overlay">
+                                            <div class="imageContainer w-100">
+                                                <img class="image rounded w-100" src="{{$monster->__get('imgPath')}}" alt="">
+                                                <p class="overlay w-100">
                                                     {{$monster->__get('name')}},
                                                     Level ({{$monster->__get('level')}}),
                                                     Hp ({{$monster->__get('hp')}}),
@@ -32,11 +32,11 @@
                                 @endforeach
                             </div>
                             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                                <i class="fa fa-chevron-left fa-lg text-muted"></i>
+                                <i class="carousel-control-prev-icon"></i>
                                 <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
-                                <i class="fa fa-chevron-right fa-lg text-muted"></i>
+                                <i class="carousel-control-next-icon"></i>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
@@ -49,11 +49,9 @@
 @section('style')
     <style>
         /*
-
-CC 2.0 License Iatek LLC 2018
-Attribution required
-
-*/
+        CC 2.0 License Iatek LLC 2018
+        Attribution required
+        */
 
         @media (min-width: 768px) {
 
