@@ -13,7 +13,7 @@
                                     <td class="">
                                         <a href="{{route('monster', $key)}}">
                                             <div class="imageContainer">
-                                                <img class="align-middle rounded" src="{{$monster->__get('imgPath')}}" alt="">
+                                                <img class="align-middle rounded mx-auto d-block" src="{{$monster->__get('imgPath')}}" alt="">
                                                 <p class="overlay w-100">
                                                     {{$monster->__get('name')}},
                                                     Level ({{$monster->__get('level')}}),

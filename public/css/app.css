@@ -10646,8 +10646,6 @@ a.text-dark:focus {
 
 .imageContainer {
   position: relative;
-  width: 50%;
-  max-width: 172px;
   padding: 0%;
   display: inline-block;
 }

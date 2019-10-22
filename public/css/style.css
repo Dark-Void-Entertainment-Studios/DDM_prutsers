@@ -224,8 +224,3 @@ body {
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
 }
-
-.monsterContainer {
-	overflow-x: scroll;
-
-}

@@ -9,7 +9,7 @@
                 <!-- <a href="/home" class="btn btn-default">Select</a> -->
                 <form action="/home" class="text-center">
                     @foreach($characters as $character)
-                <div class="imageContainer">
+                <div class="imageContainer mw-50">
                     <img src="{{$character->__get("imgPath")}}" class="image rounded">
                     <div class="overlay">{{$character->__get('name')}}</div>
                 </div>
