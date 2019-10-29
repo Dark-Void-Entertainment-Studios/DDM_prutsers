@@ -15,6 +15,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/game.js') }}" defer></script>
     <script src="{{ asset('js/slide.js') }}" defer></script>
+    <script src="{{ asset('js/characters.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

@@ -11,59 +11,59 @@ class CharactersSeeder extends Seeder
      */
     public function run()
     {
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Artificial Intelligence (A.I.)",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Jaden Yuki",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Joey Wheeler",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Mai Valentine",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Maximillion Pegasus",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Ruff Ruff McDogg",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Seto Kaiba",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Téa Gardner",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Yugi Muto",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Yugo",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Yuma Tsukumo",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Yusaku Fujiki",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Yusei Fudo",
     ]);
 
-    	DB::table('characters')->insert([
+    	DB::table('personas')->insert([
     		'name' => "Z-one",
     ]);
 	}

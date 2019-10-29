@@ -49,7 +49,7 @@ function getUrlParameters() {
  * Makes the playboard and can be set to play with 2 or 4 players.
  */
 
-function makeBoard(a, obstacles, time) {
+function makeBoard(a, obstacles) {
     for (var rowCount = 0; rowCount < board[a][0]; rowCount++) {
         var row = document.createElement("div");
         row.setAttribute("class", "row");

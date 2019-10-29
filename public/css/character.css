@@ -1,4 +1,4 @@
-.container {
+.imageContainer {
   position: relative;
   width: 50%;
   max-width: 172px;
@@ -16,7 +16,7 @@
   position: absolute; 
   bottom: 0; 
   background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  background: rgba(0, 0, 0, 0.5);  Black see-through 
   color: #f1f1f1; 
   width: 100%;
   transition: .5s ease;
@@ -27,6 +27,13 @@
   text-align: center;
 }
 
-.container:hover .overlay {
+.imageContainer:hover .overlay {
   opacity: 1;
+}
+
+.characterTitle {
+  background-color: #000000;
+  width: 300px;
+  margin: auto;
+  font-family: "comic sans MS";
 }
