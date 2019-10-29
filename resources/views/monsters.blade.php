@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="d-flex justify-content-center">
             <div class="col-md-8">
                 <div class="card text-dark">
                     <h class="card-header">Dashboard</h>
