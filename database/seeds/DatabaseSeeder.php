@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
              MonsterTableSeeder::class,
              CharactersSeeder::class
          ]);
+
     }
 }
