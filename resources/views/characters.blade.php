@@ -8,13 +8,13 @@
             <form action="/board" class="text-center">
                 <p class="characterTitle">You can select your character here!
                 <input class="btn btn-default bg-light" type="submit" value="Play"></p>
-                    @foreach($characters as $key => $character)
+                    @foreach($characters as $character)
                 <div class="imageContainer mw-50">
-                    <img src="{{$character->__get("imgPath")}}" class="image rounded" onclick="saveCharacter({{$key}})">
+                    <img src="{{$character->__get("imgPath")}}" class="image rounded" onclick="saveCharacter({{$loop->iteration}})">
                     <div class="overlay">{{$character->__get('name')}}</div>
                 </div>
                     @endforeach
-                    <input type="hidden" name="character" value="" id="select">
+                    <input type="hidden" name="character" value="0" id="select">
                 </form>
         </div>
     </div>

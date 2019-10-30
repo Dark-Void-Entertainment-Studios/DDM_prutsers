@@ -16,11 +16,10 @@ class GameController extends Controller
      */
     public function index(Request $request)
     {
-    	DB::insert('select * FROM ');
+    	$persona = Personas::find($request["character"]);
+    	$DDM = new DDM($request);
+    	$DDM->startGame($request, $persona, 1, 1);
 
-    	$ookniet = new DDM($request);
-    	$ookniet->startGame($request, $persona, 1, 1);
-    	dd($ookniet);
         return view('playBoard');
     }
 }
