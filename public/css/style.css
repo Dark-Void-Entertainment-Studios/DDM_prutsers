@@ -21,18 +21,29 @@ nav{
 	width: 100%;
 	margin: 0%;
 }
+.navbar-brand{
+	color: white;
+}
+.navbar-brand:hover{
+	color: grey;
+}
+.nav-link{
+	color: white;
+}
+.nav-link:hover{
+	color: grey;
+	font-weight: bold;
+}
 #loginCheck{
 	width: 200px;
 }
 #loginCheck p{
 	width: 150px;
 }
-#alert{
-
-}
 .navbar{
 	background-color: black;
 	border-radius: 25px;
+	color: white;
 }
 .content{
 	background-color: black;
@@ -47,6 +58,10 @@ nav{
 	padding: 2.3em 0;
 	z-index: 1;
 }
+#time, #buffer{
+	color: orange;
+}
+
 .card{
 	background-color: black;
 	top: 0;
@@ -104,7 +119,7 @@ nav{
 	color: white;
 }
 .customNav a:hover{
-	color: white;
+	color: grey;
 }
 .customNav a.active {
 	color: #000000;
@@ -142,7 +157,6 @@ nav{
    background-color: black;
    top: 0;
    left: 0;
-
 }
 .break{
   flex-basis: 100%;
@@ -173,8 +187,7 @@ nav{
   z-index: -1;
   background-image: url(../image/cards.png);
   position: relative;	
-    margin: 20px;
-
+  margin: 20px;
 }
 .flex-layer{
 	background-color: rgba(248, 247, 217, 0.7);
@@ -220,5 +233,4 @@ nav{
   display: flex;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
-  color: blue;
 }

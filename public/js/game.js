@@ -3,8 +3,12 @@ var player1 = document.getElementById("player1");
 var player2 = document.getElementById("player2");
 var endButton1 = document.getElementById("endButton1");
 var endButton2 = document.getElementById("endButton2");
+var timerButton = document.getElementById("time");
+var bufferButton = document.getElementById("buffer");
 var board   = [[13, 19], [26, 19]];
 var players = [["player1", 3],["player2", 3]];
+var hash = getUrlParameters();
+var extend = getUrlParameters();
 var turnCount = 0;
 var timer;
 var time;
@@ -16,7 +20,6 @@ var time;
  */
 
 function changeUrlParameters() {
-    var hash = getUrlParameters();
     if (hash.boardSize == 1) {
         var a   = 1;
     } else {
@@ -179,7 +182,64 @@ function _timer(callback)
         $('p.timer span.minute').html(minute);
     }
 }
+
+function _buff(callback)
+{
+    var buffer = 0;     //  The default time of the timer
+    var status = 0;    //    Status: timer is running or stoped
+    var buffer_id;    //    This is used by setInterval function
+    
+    // this will start the timer ex. start the timer with 1 second interval timer.start(1000) 
+    this.start = function(interval)
+    {
+        interval = (typeof(interval) !== 'undefined') ? interval : 1000;
  
+        if(status == 0)
+        {
+            status = 1;
+            buffer_id = setInterval(function()
+            {
+                if(buffer)
+                {
+                    buffer--;
+                    generateBuffer();
+                    if(typeof(callback) === 'function') callback(buffer);
+                }
+            }, interval);
+        }
+    }
+    
+    //  Same as the name, this will stop or pause the timer ex. timer.stop()
+    this.stop =  function()
+    {
+        if(status == 1)
+        {
+            status = 0;
+            clearInterval(buffer_id);
+        }
+    }
+    
+    // Reset the timer to zero or reset it to your own custom time ex. reset to zero second timer.reset(0)
+    this.reset =  function(sec)
+    {
+        sec = (typeof(sec) !== 'undefined') ? sec : 0;
+        buffer = sec;
+        generateTime(buffer);
+    }
+    
+    // This methode will render the time variable to minute:second format
+    function generateTime()
+    {
+        var second = buffer % 60;
+        var minute = Math.floor(buffer / 60) % 60;
+        
+        second = (second < 10) ? '0'+second : second;
+        minute = (minute < 0) ? '0'+minute : minute;
+        
+        $('p.timer span.second').html(second);
+        $('p.timer span.minute').html(minute);
+    }
+}
 // example use
  
 // $(document).ready(function(e) 
@@ -204,7 +264,8 @@ function isOdd(num) {
 }
 
 function startTurn() {
-    var hash = getUrlParameters();
+    bufferButton.style.display = "none";
+    timerButton.style.display = "inline";
     if (hash.time == 1) {
         var turnTime = 60;
     } else if (hash.time == 2) {
@@ -225,14 +286,47 @@ function startTurn() {
             {
                 if(time == 0)
                 {
-                    nextTurn();
+                    extendAlert();
                     timer.reset(turnTime);
                     turnCount++;
                 }
             }
         );
         timer.reset(time);
+
         timer.start(1000);
+    });
+}
+function extendAlert(){
+    if(confirm('Do you want to use your buffer?')){
+        extendTurn();
+    } else {
+        nextTurn();
+    }
+}
+
+function extendTurn(){
+    timerButton.style.display = "none";
+    bufferButton.style.display = "inline";
+    if (extend.buffer == 1){
+        var bufferTime = 60;
+    } else if (extend.buffer == 2) {
+        var bufferTime = 120;
+    } else {
+        var bufferTime = 180;
+    }
+    console.log(bufferTime);
+    var buffer = bufferTime;
+    $(document).ready(function(e){
+        buff = new _buff 
+        (
+            function (buffer){
+                if(buffer == 0)
+                {
+                    nextTurn();
+                    turnCount++;
+                }
+            });
     });
 }
 
@@ -245,6 +339,9 @@ function nextTurn() {
         endButton2.style.display = "inline";
     }
 }
+
+
+
 
 changeUrlParameters()
 addPlayers()
