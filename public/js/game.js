@@ -5,20 +5,18 @@ var endButton1 = document.getElementById("endButton1");
 var endButton2 = document.getElementById("endButton2");
 var board   = [[13, 19], [26, 19]];
 var players = [["player1", 3],["player2", 3]];
+var hash = getUrlParameters();
 var turnCount = 0;
 var timer;
 var time;
 var colourPlayer1 = "blue";
 var colourPlayer2 = "red";
-
 /**
  * changeUrlParameters()
  * 
  * changes the Url hash into a boolean.
  */
-
 function changeUrlParameters() {
-    var hash = getUrlParameters();
     if (hash.boardSize == 1) {
         var a   = 1;
     } else {
@@ -31,7 +29,6 @@ function changeUrlParameters() {
     }
     makeBoard(a, obstacles)
 }
-
 function getUrlParameters() {
     var pageParamString = unescape(window.location.search.substring(1));
     var paramsArray = pageParamString.split('&');
@@ -44,13 +41,11 @@ function getUrlParameters() {
     }
     return paramsHash;
 }
-
 /**
  * makeBoard()
  * 
  * Makes the playboard and can be set to play with 2 or 4 players.
  */
-
 function makeBoard(a, obstacles) {
     for (var rowCount = 0; rowCount < board[a][0]; rowCount++) {
         var row = document.createElement("div");
@@ -75,13 +70,11 @@ function makeBoard(a, obstacles) {
     startPlayer1.style.backgroundColor = colourPlayer1;
     startPlayer2.style.backgroundColor = colourPlayer2;
 }
-
 /**
  * addObstacles
  * 
  * It adds obstacles to the board.
  */
-
 function addObstacles(rowCount, obstacles) {
     if (obstacles) {
         var b = randomSquare();
@@ -94,12 +87,10 @@ function addObstacles(rowCount, obstacles) {
         stone.setAttribute("onclick", "alert('You cannot place a dice here!')");
     }
 }
-
 function randomSquare() {
     var random = Math.floor(Math.random() * 19);
         return random;
 }
-
 function addPlayers() {
     var name = document.createElement("p");
     name.innerHTML = players[0][0];
@@ -109,7 +100,6 @@ function addPlayers() {
     player2.appendChild(name);
     startTurn();
 }
-
 function _timer(callback)
 {
     var time = 0;     //  The default time of the timer
@@ -135,7 +125,6 @@ function _timer(callback)
             }, interval);
         }
     }
-    
     //  Same as the name, this will stop or pause the timer ex. timer.stop()
     this.stop =  function()
     {
@@ -145,7 +134,6 @@ function _timer(callback)
             clearInterval(timer_id);
         }
     }
-    
     // Reset the timer to zero or reset it to your own custom time ex. reset to zero second timer.reset(0)
     this.reset =  function(sec)
     {
@@ -153,7 +141,6 @@ function _timer(callback)
         time = sec;
         generateTime(time);
     }
-    
     // This methode will render the time variable to minute:second format
     function generateTime()
     {
@@ -167,13 +154,10 @@ function _timer(callback)
         $('p.timer span.minute').html(minute);
     }
 }
-
 function isOdd(num) {
     return num % 2;
 }
-
 function startTurn() {
-    var hash = getUrlParameters();
     if (hash.time == 1) {
         var turnTime = 60;
     } else if (hash.time == 2) {
@@ -207,7 +191,6 @@ function startTurn() {
             }
         );
         timer.reset(time);
-
         timer.start(1000);
     });
 }
@@ -218,12 +201,10 @@ function extendAlert(){
         nextTurn();
     }
 }
-
 function extendTurn(){
-    var extend = getUrlParameters();
-    if (extend.buffer == 1){
+    if (hash.buffer == 1){
         var bufferTime = 60;
-    } else if (extend.buffer == 2) {
+    } else if (hash.buffer == 2) {
         var bufferTime = 120;
     } else {
         var bufferTime = 180;
@@ -242,7 +223,6 @@ function extendTurn(){
             });
     });
 }
-
 function nextTurn() {
     if (isOdd(turnCount)) {
         endButton2.style.display = "none";
@@ -252,6 +232,5 @@ function nextTurn() {
         endButton2.style.display = "inline";
     }
 }
-
 changeUrlParameters();
 addPlayers();
