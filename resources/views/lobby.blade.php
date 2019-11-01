@@ -12,7 +12,7 @@
             <h3>lobbies</h3>
             </section>
             <section class="col-md-3">
-            <form action="/board">
+            <form action="/characters">
             <h3>create</h3>
             <p>options:</p>
                 <div class="form-check">
