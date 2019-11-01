@@ -1,6 +1,6 @@
 var idHealer = document.getElementById('select');
 
 function saveCharacter(key) {
-  alert("You have chosen " + key + " as your character.");
+  document.getElementById(key).style = "border: 2px solid lightblue";
   idHealer.value = key;
 }

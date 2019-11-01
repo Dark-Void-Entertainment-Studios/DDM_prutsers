@@ -10,7 +10,7 @@
                 <input class="btn btn-default bg-light" type="submit" value="Play"></p>
                     @foreach($characters as $character)
                 <div class="imageContainer mw-50">
-                    <img src="{{$character->__get("imgPath")}}" class="image rounded" onclick="saveCharacter({{$loop->iteration}})">
+                    <img src="{{$character->__get("imgPath")}}" class="image rounded" id="{{$loop->iteration}}" onclick="saveCharacter({{$loop->iteration}})">
                     <div class="overlay">{{$character->__get('name')}}</div>
                 </div>
                     @endforeach
