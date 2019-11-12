@@ -16,7 +16,7 @@ class AdminCheck
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->userRights == false) {
+        if(Auth::user()->userRights == true) {
            return redirect("home");
         }
 
