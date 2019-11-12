@@ -1,8 +1,8 @@
-s<?php
+<?php
 
 use Illuminate\Database\Seeder;
 
-class CharactersSeeder extends Seeder
+class CharacterTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -10642,5 +10642,28 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+
+    #timer {
+        background-color: #000000;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        padding: 10px 0px;
+    }
+
+    #left {
+        background-color: #000000;
+        padding-top: 15px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+
+    #right {
+        background-color: #000000;
+        padding-top: 15px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
 }
 

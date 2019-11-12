@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
          $this->call([
              UserTableSeeder::class,
              MonsterTableSeeder::class,
-             CharactersSeeder::class
+             CharacterTableSeeder::class
          ]);
 
     }

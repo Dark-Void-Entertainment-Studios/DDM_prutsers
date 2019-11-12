@@ -2,6 +2,7 @@
 
 namespace App;
 
+
 class Monster
 {
     private $name;
@@ -20,14 +21,18 @@ class Monster
        $this->def = $def;
        $this->hp = $hp;
        $this->effect = $effect;
-       $name = str_replace(" ", "", $name);
-       $name = str_replace("#1", "", $name);
-       $this->imgPath = "img/". $name . ".png" ;
+       $this->setImage($name);
     }
 
     public function __get($item)
     {
        return $this->$item;
+    }
+
+    private function setImage($name) {
+        $name = str_replace(" ", "", $name);
+        $name = str_replace("#1", "", $name);
+        $this->imgPath = "img/". $name . ".png" ;
     }
 
     public function attacked($dam) {
