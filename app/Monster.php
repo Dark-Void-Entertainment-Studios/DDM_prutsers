@@ -30,8 +30,6 @@ class Monster
     }
 
     private function setImage($name) {
-        $name = str_replace(" ", "", $name);
-        $name = str_replace("#1", "", $name);
         $this->imgPath = "img/". $name . ".png" ;
     }
 

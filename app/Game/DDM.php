@@ -16,7 +16,7 @@ class DDM
         if($request->session()->has('ongoingGame')){
             $this->info = $request->session()->get('ongoingGame');
         } else {
-            $this->info = NULL;
+            $this->info = 0;
         }
     }
     public function startGame($request, $charactor, $player, $id)
@@ -27,7 +27,7 @@ class DDM
         } 
         else
         {
-            $this->info = NULL;
+            $this->info = 0;
         }
         $this->saveGame($request);
     }

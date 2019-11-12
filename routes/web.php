@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('adminCheck');
 
 Route::get('/monsters', 'HomeController@monsters')->name('monsters');
 route::get('/monster/{id}', 'HomeController@MonsterShow')->name('monster');
