@@ -10,6 +10,8 @@ var timer;
 var time;
 var colourPlayer1 = "blue";
 var colourPlayer2 = "red";
+var player = 0;
+
 
 /**
  * changeUrlParameters()
@@ -58,6 +60,7 @@ function makeBoard(a, obstacles) {
         for (var column = 0; column < board[a][1]; column++) {
             var square  = document.createElement("div");
             square.setAttribute("id", "square_" + rowCount + "_" + column);
+            square.setAttribute("onclick", "selectTile(square_" + rowCount + "_" + column +")");
             square.setAttribute("class", "square");
             square.style.border = "1.5px solid black";
             square.style.width  = "50px";
@@ -74,6 +77,8 @@ function makeBoard(a, obstacles) {
     var startPlayer2 = document.getElementById("square_" + centerRow + "_18");
     startPlayer1.style.backgroundColor = colourPlayer1;
     startPlayer2.style.backgroundColor = colourPlayer2;
+    startPlayer1.setAttribute("onclick", "alert('https://www.youtube.com/watch?v=umDr0mPuyQc')");
+    startPlayer2.setAttribute("onclick", "alert('https://www.youtube.com/watch?v=umDr0mPuyQc')");
 }
 
 /**
@@ -215,9 +220,23 @@ function nextTurn() {
     if (isOdd(turnCount)) {
         endButton2.style.display = "none";
         endButton1.style.display = "inline";
+        player = 0;
     } else {
         endButton1.style.display = "none";
         endButton2.style.display = "inline";
+        player = 1;
+    }
+}
+
+function selectTile(a){
+    if (player != 1){
+        $(document).ready(function(){
+            $(a).click(function(){
+                $(this).hide();
+            });
+        });
+    } else {
+
     }
 }
 
