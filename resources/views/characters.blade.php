@@ -14,7 +14,7 @@
                     <div class="overlay">{{$character->__get('name')}}</div>
                 </div>
                     @endforeach
-                    <input type="hidden" name="character" value="0" id="select">
+                    <input type="hidden" name="character" value="1" id="select">
                 </form>
         </div>
     </div>
