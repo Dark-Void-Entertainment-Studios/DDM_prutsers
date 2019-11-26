@@ -11,6 +11,7 @@ use App\monsters\Jinzo;
 
 class GameController extends Controller
 {
+    public $monster;
    /**
      * Show the application dashboard.
      *
@@ -18,14 +19,14 @@ class GameController extends Controller
      */
     public function index(Request $request)
     {
-    	// $persona = Personas::find($request["character"]);
-    	$DDM = new DDM($request);
-        // $DDM->startGame($request, $persona, 1, 1);
+        $DDM = new DDM($request);
         $monster = new jinzo();
+        return view('playBoard');
+    }
 
-        // dd($monster);
-        return view('playBoard', [
-            'monster' => $monster,
-        ]);
+    public function getName()
+    {
+        $name = $monster->__get(name);
+        return $name;
     }
 }
