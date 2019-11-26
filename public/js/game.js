@@ -231,9 +231,7 @@ function nextTurn() {
 function selectTile(a){
     if (player != 1){
         $(document).ready(function(){
-            $(a).click(function(){
-                $(this).hide();
-            });
+            $(a).hide();
         });
     } else {
 
