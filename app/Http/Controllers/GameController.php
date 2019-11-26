@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Game\DDM;
 use Session;
 use App\Personas;
+use App\monsters\Jinzo;
+
 
 class GameController extends Controller
 {
@@ -16,10 +18,14 @@ class GameController extends Controller
      */
     public function index(Request $request)
     {
-    	$persona = Personas::find($request["character"]);
+    	// $persona = Personas::find($request["character"]);
     	$DDM = new DDM($request);
-    	$DDM->startGame($request, $persona, 1, 1);
+        // $DDM->startGame($request, $persona, 1, 1);
+        $monster = new jinzo();
 
-        return view('playBoard');
+        // dd($monster);
+        return view('playBoard', [
+            'monster' => $monster,
+        ]);
     }
 }

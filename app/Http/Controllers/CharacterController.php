@@ -16,6 +16,7 @@ class CharacterController extends Controller
      */
     public function index()
     {
+    
         $characterClasses = ClassFinder::getClassesInNamespace('App\Characters');
         $characters = [];
 
