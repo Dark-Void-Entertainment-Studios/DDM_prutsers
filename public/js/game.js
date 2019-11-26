@@ -231,10 +231,12 @@ function nextTurn() {
 function selectTile(a){
     if (player != 1){
         $(document).ready(function(){
-            $(a).hide();
+            $(a).css("background-color", "white");
         });
     } else {
-
+        $(document).ready(function(){
+            $(a).css("background-color", "yellow");
+        });
     }
 }
 
