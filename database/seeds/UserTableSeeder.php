@@ -15,13 +15,14 @@ class UserTableSeeder extends Seeder
             'name' => "adminTest",
             'email' => 'admin@gmail.com',
             'password' => bcrypt('wachtwoord'),
-            'userRights' => 1,
+            'role_id' => 2,
             'email_verified_at' => Carbon\Carbon::now()
         ]);
 
         DB::table('users')->insert([
-            'name' => "userTest",
-            'email' => 'user@gmail.com',
+            'name' => "superUser",
+            'email' => 'superuser@gmail.com',
+            'role_id' => 3,
             'password' => bcrypt('wachtwoord'),
             'email_verified_at' => Carbon\Carbon::now()
         ]);

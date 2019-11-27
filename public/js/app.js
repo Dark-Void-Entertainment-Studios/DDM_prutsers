@@ -49507,8 +49507,13 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! D:\kkovacic\Documents\DDM_prutsers\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! D:\kkovacic\Documents\DDM_prutsers\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\Program Files (x86)\Ampps\www\DDM\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Program Files (x86)\Ampps\www\DDM\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> origin/testing
 
 
 /***/ })
