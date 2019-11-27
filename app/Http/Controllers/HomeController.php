@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use HaydenPierce\ClassFinder\ClassFinder;
 use Illuminate\Http\Request;
 
