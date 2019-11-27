@@ -24,6 +24,7 @@ Auth::routes(['verify' => true]);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/user', 'UserController@index');
+    Route::get('/monsterName', 'GameController@getName');
     Route::get('/board', 'GameController@index');
     Route::get('/lobby', 'LobbyController@index');
     Route::get('/characters', 'CharacterController@index');
