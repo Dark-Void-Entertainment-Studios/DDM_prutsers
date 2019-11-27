@@ -25,9 +25,6 @@ body {
 #loginCheck p{
 	width: 150px;
 }
-#alert{
-
-}
 .navbar{
 	background-color: black;
 	border-radius: 25px;
@@ -81,10 +78,6 @@ body {
 .containerheader{
 	background-color: black;
 }
-
-#logo{;
-}
-
 .customNav ul, li{
 	padding: 0 1.4em 0 0;
 	font-size: 0.9em;
@@ -220,7 +213,6 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
 }
