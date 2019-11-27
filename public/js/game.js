@@ -58,7 +58,7 @@ function makeBoard(a, obstacles) {
         var row = document.createElement("div");
         row.setAttribute("class", "row");
         for (var column = 0; column < board[a][1]; column++) {
-            var square  = document.createElement("div");
+            var square  = document.createElement("a");
             square.setAttribute("id", "square_" + rowCount + "_" + column);
             square.setAttribute("onclick", "selectTile(square_" + rowCount + "_" + column +")");
             square.setAttribute("class", "square");
@@ -229,6 +229,7 @@ function nextTurn() {
 }
 
 function selectTile(a){
+    $(a).addEventListener("click", displayDate);
     if (player != 1){
         $(document).ready(function(){
             $(a).css("background-color", "white");
@@ -238,6 +239,11 @@ function selectTile(a){
             $(a).css("background-color", "yellow");
         });
     }
+}
+
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
 }
 
 changeUrlParameters();
