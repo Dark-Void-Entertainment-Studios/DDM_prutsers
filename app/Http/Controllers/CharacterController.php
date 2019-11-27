@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use HaydenPierce\ClassFinder\ClassFinder;
 use Illuminate\Http\Request;
+use App\Game;
+use Session;
+
 
 class CharacterController extends Controller
 {
@@ -19,7 +22,6 @@ class CharacterController extends Controller
 
         foreach ($characterClasses as $character) {
             $a = new $character;
-
             array_push($characters, $a);
         }
 
