@@ -13,7 +13,7 @@ class Monster
     private $effect;
     private $imgPath;
 
-    public function __construct($name, $level, $atk, $def, $hp, $effect = "N/A")
+    public function __construct($name, $level, $atk = 0, $def = 0, $hp = 0, $effect = "N/A")
     {
        $this->name = $name;
        $this->level = $level;

@@ -29,7 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/characters', 'CharacterController@index');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth','adminCheck']], function(){
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','HasRole:Admin,Super Admin']], function(){
     Route::resource('admin', 'AdminController');
     Route::put('makeAdmin/{id}', 'AdminController@makeAdmin')->name('makeAdmin');
 });

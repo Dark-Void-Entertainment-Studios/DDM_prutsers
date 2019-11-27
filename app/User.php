@@ -37,4 +37,17 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+    public function getRole() {
+        return $this->hasOne('App\Role', 'id', 'role_id');
+    }
+
+    public function hasNotRole($role)
+    {
+
+        if ($this->GetRole->role != $role){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

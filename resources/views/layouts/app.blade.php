@@ -73,7 +73,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{route('monsters')}}">Monsters</a>
-                                    @if(Auth::user()->userRights == 1)
+                                    @if(Auth::user()->hasNotRole('Basic'))
                                         <a class="dropdown-item" href="{{route('admin.index')}}">admin</a>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"

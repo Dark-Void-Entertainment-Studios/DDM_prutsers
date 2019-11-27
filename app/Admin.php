@@ -2,28 +2,18 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\User;
 
-class Admin extends Model
+class Admin extends User
 {
-    protected $table = 'users';
-
-    public function checkRole() {
-        if ($this["userRights"] == 1) {
-            return "admin";
-        } elseif($this["email_verified_at"] != null) {
-            return "user";
-        } else {
-            return "guest";
-        }
-    }
+    protected $table = "users";
 
     public function makeAdmin()
     {
-        if ($this->userRights == 0) {
-            $this->userRights = 1;
+        if ($this->role_id == 2) {
+            $this->role_id = 1;
         } else {
-            $this->userRights = 0;
+            $this->role_id = 2;
         };
     }
 }

@@ -30,7 +30,6 @@ class HomeController extends Controller
     public function monsters()
     {
         $monsterClasses = ClassFinder::getClassesInNamespace('App\Monsters');
-
         $monsters = [];
 
         foreach ($monsterClasses as $monster) {
