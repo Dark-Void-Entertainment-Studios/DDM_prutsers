@@ -3069,11 +3069,7 @@
                 "laravel",
                 "page"
             ],
-<<<<<<< HEAD
-            "time": "2019-09-26T22:53:50+00:00"
-=======
             "time": "2019-09-20T09:37:06+00:00"
->>>>>>> f42a245c9b568681891d3e1f85756d5afc486f1a
         },
         {
             "name": "facade/ignition-contracts",
