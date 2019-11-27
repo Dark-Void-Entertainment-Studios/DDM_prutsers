@@ -8,6 +8,8 @@ var players = [["player1", 3],["player2", 3]];
 var turnCount = 0;
 var timer;
 var time;
+var colourPlayer1 = "blue";
+var colourPlayer2 = "red";
 
 /**
  * changeUrlParameters()
@@ -49,7 +51,11 @@ function getUrlParameters() {
  * Makes the playboard and can be set to play with 2 or 4 players.
  */
 
+<<<<<<< HEAD
+function makeBoard(a, obstacles) {
+=======
 function makeBoard(a, obstacles, time) {
+>>>>>>> origin/testing
     for (var rowCount = 0; rowCount < board[a][0]; rowCount++) {
         var row = document.createElement("div");
         row.setAttribute("class", "row");
@@ -61,12 +67,17 @@ function makeBoard(a, obstacles, time) {
             square.style.width  = "50px";
             square.style.height = "50px";
             square.style.cssFloat = "right";
-            square.style.backgroundColor = "SaddleBrown ";
+            square.style.backgroundColor = "SaddleBrown";
             row.appendChild(square);
         }
         game.appendChild(row);
         addObstacles(rowCount, obstacles); 
     }
+    var centerRow = Math.floor(rowCount / 2);
+    var startPlayer1 = document.getElementById("square_" + centerRow + "_0");
+    var startPlayer2 = document.getElementById("square_" + centerRow + "_18");
+    startPlayer1.style.backgroundColor = colourPlayer1;
+    startPlayer2.style.backgroundColor = colourPlayer2;
 }
 
 /**
@@ -82,7 +93,7 @@ function addObstacles(rowCount, obstacles) {
                 b = randomSquare();
             }
         var stone = document.getElementById("square_" + rowCount + "_" + b);
-        stone.style.backgroundImage = "url('img/stone.jpg')";
+        stone.style.backgroundImage = "url('img/stone.png')";
         stone.style.backgroundSize  = "auto";
         stone.setAttribute("onclick", "alert('You cannot place a dice here!')");
     }
@@ -102,25 +113,6 @@ function addPlayers() {
     player2.appendChild(name);
     startTurn();
 }
-
-// function startTimer(duration, display) {
-//     var timer = duration, minutes, seconds;
-//     setInterval(function () {
-//         minutes = parseInt(timer / 60, 10)
-//         seconds = parseInt(timer % 60, 10);
-
-//         minutes = minutes < 0 ? "0" + minutes : minutes;
-//         seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//         display.textContent = minutes + ":" + seconds;
-        
-
-//         if (--timer < 0) {
-//             andTurn();
-//             timer = duration;
-//         }
-//     }, 1000);
-// }
 
 function _timer(callback)
 {
@@ -179,25 +171,6 @@ function _timer(callback)
         $('p.timer span.minute').html(minute);
     }
 }
- 
-// example use
- 
-// $(document).ready(function(e) 
-// {
-//     timer = new _timer
-//     (
-//         function(time)
-//         {
-//             if(time == 0)
-//             {
-//                 timer.stop();
-//                 alert('time out');
-//             }
-//         }
-//     );
-//     timer.reset(0);
-//     timer.mode(0);
-// });
 
 function isOdd(num) {
     return num % 2;
@@ -215,7 +188,6 @@ function startTurn() {
     endButton1.setAttribute("onclick", "timer.reset(1)");
     endButton2.setAttribute("onclick", "timer.reset(1)");
     endButton2.style.display = "none";
-    console.log(turnTime);
     var time = turnTime;
     $(document).ready(function(e) 
     {
@@ -223,11 +195,18 @@ function startTurn() {
         (
             function(time)
             {
-                if(time == 0)
-                {
+                var myTimer = document.getElementById("timer");
+                if (time == 0) {
                     nextTurn();
                     timer.reset(turnTime);
+                    myTimer.style.color = "white";
+                    myTimer.style.fontWeight = "normal";
+                    myTimer.style.fontSize = "14px";
                     turnCount++;
+                } else if (time <= 10) {
+                    myTimer.style.color = "red";
+                    myTimer.style.fontWeight = "bold";
+                    myTimer.style.fontSize = "22px";
                 }
             }
         );
@@ -246,8 +225,5 @@ function nextTurn() {
     }
 }
 
-changeUrlParameters()
-addPlayers()
-// startTurn()
-
-
+changeUrlParameters();
+addPlayers();
