@@ -229,7 +229,6 @@ function nextTurn() {
 }
 
 function selectTile(a){
-    $(a).addEventListener("click", displayDate);
     if (player != 1){
         $(document).ready(function(){
             $(a).css("background-color", "white");
