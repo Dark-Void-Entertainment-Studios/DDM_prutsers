@@ -52,8 +52,8 @@
         </p>
     </li>
     <li class="flex-item-1">
-        <p class="flex-text">Turns
-
+        <p class="flex-text">
+            Version <?php echo env("VERSION", "somedefaultvalue"); ?>
         </p>
     </li>
 </ul>
