@@ -52,9 +52,8 @@
         </p>
     </li>
     <li class="flex-item-1">
-        <p class="flex-text">
-            Version <?php echo env("VERSION", "v.0.4.0"); ?>
-        </p>
+        <p class="flex-text">Version <?php echo $data["2"]["tag"] ?></p>
+        <p class="flex-text">info <?php echo $data["2"]["changes"] ?></p>
     </li>
 </ul>
 </div>
