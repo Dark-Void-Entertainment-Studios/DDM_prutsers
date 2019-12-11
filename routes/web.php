@@ -27,7 +27,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/monsterName', 'GameController@getName');
     Route::get('/board', 'GameController@index');
     Route::get('/lobby', 'LobbyController@index');
-    Route::get('/characters', 'CharacterController@index');
+    Route::post('/characters', 'CharacterController@index');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['adminCheck']], function(){
