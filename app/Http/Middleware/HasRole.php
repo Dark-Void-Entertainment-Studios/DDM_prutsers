@@ -18,7 +18,7 @@ class HasRole
     public function handle($request, Closure $next, ...$roles)
     {
 
-        if ( in_array(Auth::user()->GetRole->role, $roles)) {
+        if ( in_array(Auth::user()->getRole->role, $roles)) {
             return $next($request);
         }
 
