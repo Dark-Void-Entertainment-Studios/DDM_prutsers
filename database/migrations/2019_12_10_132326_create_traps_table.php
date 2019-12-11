@@ -15,7 +15,8 @@ class CreateTrapsTable extends Migration
     {
         Schema::create('traps', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->string('name');
+            $table->string('effect');
         });
     }
 
