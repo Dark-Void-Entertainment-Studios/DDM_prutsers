@@ -10644,3 +10644,57 @@ a.text-dark:focus {
   }
 }
 
+.imageContainer {
+  position: relative;
+  padding: 0%;
+  display: inline-block;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+}
+
+.imageContainer:hover .overlay {
+  opacity: 1;
+}
+
+#timer {
+  background-color: #000000;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  padding: 10px 0px;
+}
+
+#left {
+  background-color: #000000;
+  padding-top: 15px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+#right {
+  background-color: #000000;
+  padding-top: 15px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+

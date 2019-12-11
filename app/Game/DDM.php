@@ -10,6 +10,7 @@ use App\Monster;
 class DDM
 {
     private $info = [];
+    private $boardOptions = [];
 
     public function __construct($request)
     {

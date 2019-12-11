@@ -37,3 +37,18 @@
   margin: auto;
   font-family: "comic sans MS";
 }
+
+.player1 {
+  border: 2px solid lightblue;
+}
+
+.player2 {
+  border: 2px solid red;
+}
+
+.playerBoth {
+  border-top: 2px solid lightblue;
+  border-left: 2px solid lightblue;
+  border-bottom: 2px solid red;
+  border-right: 2px solid red;
+}
