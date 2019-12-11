@@ -16,6 +16,7 @@ class DDM
     private $obst;
     private $player;
     private $SID;
+    private $time;
 
 
     public function __construct($request)
@@ -26,7 +27,7 @@ class DDM
             $this->info = NULL;
         }
     }
-    public function startGame($request, $boardSize, $obst, $id)
+    public function startGame($request, $boardSize, $obst, $id, $time)
     {
         $this->info = [$boardSize, $obst, $id];
         $this->saveGame($request);
