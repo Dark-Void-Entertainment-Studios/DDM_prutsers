@@ -38,7 +38,7 @@ class SpellTableSeeder extends Seeder
 
         DB::table('spells')->insert([
             'name' => 'switcharoo' ,
-            'effect' => 'switch the location of 2 bombs',
+            'effect' => 'switch the location of 2 of your monsters',
         ]);
 
         DB::table('spells')->insert([

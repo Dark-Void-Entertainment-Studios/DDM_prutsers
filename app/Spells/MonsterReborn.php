@@ -9,7 +9,9 @@
 namespace App\Spells;
 
 
-class MonsterReborn
+use App\Card;
+
+class MonsterReborn extends Card
 {
     public function __construct()
     {

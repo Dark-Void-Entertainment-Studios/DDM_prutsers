@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: tommy
  * Date: 11/12/2019
- * Time: 11:13
+ * Time: 13:34
  */
 
 namespace App\Spells;
@@ -11,10 +11,10 @@ namespace App\Spells;
 
 use App\Card;
 
-class BoostMovement extends Card
+class Knockback extends Card
 {
     public function __construct()
     {
-        parent::__construct("Boost Movement", 3, 'Dubble the movement');
+        parent::__construct("Knockback", 1, 'target a monster when that monster attacks');
     }
 }
