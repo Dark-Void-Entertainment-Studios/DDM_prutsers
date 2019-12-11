@@ -53,7 +53,7 @@ class SpellTableSeeder extends Seeder
 
         DB::table('spells')->insert([
             'name' => 'forbidden lance' ,
-            'effect' => 'targeted monster loses  10 atk but becomes unaffected by trap effects',
+            'effect' => 'targeted monster loses 10 atk but becomes unaffected by trap effects',
         ]);
 
         DB::table('spells')->insert([
