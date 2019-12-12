@@ -29,6 +29,26 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                            @foreach($spells as $key => $spell)
+                                <td class="">
+                                    <a href="{{route('monster', 'spell' , $key)}}">
+                                        <div class="imageContainer">
+                                            <img class="align-middle rounded mx-auto d-block" src="https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361513_640.jpg" alt="">
+                                            <p class="overlay w-100">
+                                                {{$spell->__get('name')}},
+                                                Level ({{$spell->__get('level')}}),
+                                                Eff: {{$spell->__get('effect')}}
+                                            </p>
+                                        </div>
+                                    </a>
+                                </td>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

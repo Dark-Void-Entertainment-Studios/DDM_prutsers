@@ -30,14 +30,21 @@ class HomeController extends Controller
     public function monsters()
     {
         $monsterClasses = ClassFinder::getClassesInNamespace('App\Monsters');
+        $spellClasses = ClassFinder::getClassesInNamespace('App\Spells');
         $monsters = [];
+        $spells = [];
 
         foreach ($monsterClasses as $monster) {
             $a = new $monster;
             array_push($monsters, $a);
         }
 
-        return view('monsters', compact("monsters"));
+        foreach ($spellClasses as $spell) {
+            $a = new $spell;
+            array_push($spells, $a);
+        }
+
+        return view('monsters', compact("monsters", "spells"));
     }
 
     public function monsterShow($id)
