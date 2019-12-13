@@ -15,7 +15,10 @@ class DatabaseSeeder extends Seeder
              RoleTableSeeder::class,
              UserTableSeeder::class,
              MonsterTableSeeder::class,
-             CharacterTableSeeder::class
+             CharactersSeeder::class,
+             SpellTableSeeder::class,
+             TrapsTableSeeder::class
+
          ]);
 
     }
