@@ -35,7 +35,7 @@
                             <tbody>
                             @foreach($spells as $key => $spell)
                                 <td class="">
-                                    <a href="{{route('monster', 'spell' , $key)}}">
+                                    <p>
                                         <div class="imageContainer">
                                             <img class="align-middle rounded mx-auto d-block"
                                                  src="https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361513_640.jpg"
@@ -46,7 +46,7 @@
                                                 Eff: {{$spell->__get('effect')}}
                                             </p>
                                         </div>
-                                    </a>
+                                    </p>
                                 </td>
                             @endforeach
                             </tbody>
@@ -57,7 +57,7 @@
                             <tbody>
                             @foreach($traps as $key => $trap)
                                 <td class="">
-                                    <a href="{{route('monster', 'trap' , $key)}}">
+                                    <p>
                                         <div class="imageContainer">
                                             <img class="align-middle rounded mx-auto d-block"
                                                  src="https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361513_640.jpg" alt="">
@@ -67,7 +67,7 @@
                                                 Eff: {{$trap->__get('effect')}}
                                             </p>
                                         </div>
-                                    </a>
+                                    </p>
                                 </td>
                             @endforeach
                             </tbody>
