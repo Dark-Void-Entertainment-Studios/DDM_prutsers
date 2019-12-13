@@ -32,8 +32,10 @@ class HomeController extends Controller
     {
         $monsterClasses = ClassFinder::getClassesInNamespace('App\Monsters');
         $spellClasses = ClassFinder::getClassesInNamespace('App\Spells');
+        $trapClasses = ClassFinder::getClassesInNamespace('App\Spells');
         $monsters = [];
         $spells = [];
+        $traps = [];
 
         foreach ($monsterClasses as $monster) {
             $a = new $monster;
@@ -45,7 +47,12 @@ class HomeController extends Controller
             array_push($spells, $a);
         }
 
-        return view('monsters', compact("monsters", "spells"));
+        foreach ($trapClasses as $trap) {
+            $a = new $trap;
+            array_push($traps, $a);
+        }
+
+        return view('monsters', compact("monsters", "spells", "traps"));
     }
 
     public function monsterShow($id)
