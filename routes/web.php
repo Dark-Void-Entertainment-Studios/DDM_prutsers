@@ -13,14 +13,16 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name("home");
+
 
 Route::get('/monsters', 'HomeController@monsters')->name('monsters');
 route::get('/monster/{id}', 'HomeController@MonsterShow')->name('monster');
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/user', 'UserController@index');
@@ -29,9 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/characters', 'CharacterController@index');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ['adminCheck']], function(){
-    Route::get('/user', 'UserController@index');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','HasRole:Admin,Super Admin']], function(){
     Route::resource('admin', 'AdminController');
     Route::put('makeAdmin/{id}', 'AdminController@makeAdmin')->name('makeAdmin');
 });
-
