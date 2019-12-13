@@ -18,8 +18,8 @@ class CreateSavedGames extends Migration
             //$table->string('name');
             //$table->string('character');
             //$table->string('deck');
-            //$table->Increments('turnTimer')->default(1);
-            //$table->Increments('turnCount')->default(0);
+            $table->integer('turnTimer')->default(1);
+            $table->integer('turnCount')->default(0);
             $table->boolean('bigBoard?')->default(false);
             $table->boolean('henk?')->default(false);
             //$table->string('board?');

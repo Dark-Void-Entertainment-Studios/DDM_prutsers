@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use HaydenPierce\ClassFinder\ClassFinder;
 use Illuminate\Http\Request;
 
@@ -30,15 +31,28 @@ class HomeController extends Controller
     public function monsters()
     {
         $monsterClasses = ClassFinder::getClassesInNamespace('App\Monsters');
-
+        $spellClasses = ClassFinder::getClassesInNamespace('App\Spells');
+        $trapClasses = ClassFinder::getClassesInNamespace('App\Spells');
         $monsters = [];
+        $spells = [];
+        $traps = [];
 
         foreach ($monsterClasses as $monster) {
             $a = new $monster;
             array_push($monsters, $a);
         }
 
-        return view('monsters', compact("monsters"));
+        foreach ($spellClasses as $spell) {
+            $a = new $spell;
+            array_push($spells, $a);
+        }
+
+        foreach ($trapClasses as $trap) {
+            $a = new $trap;
+            array_push($traps, $a);
+        }
+
+        return view('monsters', compact("monsters", "spells", "traps"));
     }
 
     public function monsterShow($id)
@@ -46,8 +60,6 @@ class HomeController extends Controller
         $monsterClasses = ClassFinder::getClassesInNamespace('App\Monsters');
 
         $monster = new $monsterClasses[$id];
-
-        //dd($monster);
 
         return view('monsterShow', compact('monster'));
     }

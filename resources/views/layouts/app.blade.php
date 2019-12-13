@@ -16,6 +16,8 @@
     <script src="{{ asset('js/game.js') }}" defer></script>
     <script src="{{ asset('js/slide.js') }}" defer></script>
     <script src="{{ asset('js/characters.js') }}" defer></script>
+    <script src="{{ asset('js/ajax.js') }}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -74,6 +76,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{route('monsters')}}">Cards/Dices</a>
+                                    @if(Auth::user()->hasNotRole('Basic'))
+                                        <a class="dropdown-item" href="{{route('admin.index')}}">admin</a>
+                                    @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
