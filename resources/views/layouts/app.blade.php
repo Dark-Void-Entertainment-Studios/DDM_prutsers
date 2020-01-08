@@ -77,7 +77,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{route('monsters')}}">Monsters</a>
+                                    <a class="dropdown-item" href="{{route('monsters')}}">Cards/Dices</a>
                                     @if(Auth::user()->hasNotRole('Basic'))
                                         <a class="dropdown-item" href="{{route('admin.index')}}">admin</a>
                                     @endif
@@ -106,7 +106,6 @@
             @yield('content')
         </main>
     </div>
-    <style>@yield('style')</style>
-    <script>@yield('script')</script>
+    
 </body>
 </html>
