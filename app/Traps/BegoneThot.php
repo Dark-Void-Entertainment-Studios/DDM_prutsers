@@ -1,6 +1,10 @@
  <?php
 
+
+
 namespace App\Traps;
+
+
 use App\Card;
 
 class BegoneThot extends Card

@@ -3,9 +3,9 @@
 @section('content')
     <div class="container">
         <div class="d-flex justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card text-dark">
-                    <h class="card-header">Monsters</h>
+                    <h2 class="card-title text-white p-2 title">Monsters</h2>
                     <div class="table-responsive">
                         <table class="table">
                             <tbody>
@@ -13,9 +13,8 @@
                                 <td class="">
                                     <a href="{{route('monster', $key)}}">
                                         <div class="imageContainer">
-                                            <img class="align-middle rounded mx-auto d-block"
-                                                 src="{{$monster->__get('imgPath')}}" alt="">
-                                            <p class="overlay w-100">
+                                            <img class="rounded width" src="{{$monster->__get('imgPath')}}" alt="">
+                                            <p class="overlay w-75">
                                                 {{$monster->__get('name')}},
                                                 Level ({{$monster->__get('level')}}),
                                                 Hp ({{$monster->__get('hp')}}),
@@ -30,6 +29,10 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <br>
+                <div class="card text-dark">
+                    <h2 class="card-title text-white p-2 title">Spells</h2>
                     <div class="table-responsive">
                         <table class="table">
                             <tbody>
@@ -37,10 +40,8 @@
                                 <td class="">
                                     <a href="{{route('monster', 'spell' , $key)}}">
                                         <div class="imageContainer">
-                                            <img class="align-middle rounded mx-auto d-block"
-                                                 src="https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361513_640.jpg"
-                                                 alt="">
-                                            <p class="overlay w-100">
+                                            <img class="rounded width" src="{{$spell->__get('imgPath')}}" alt="">
+                                            <p class="overlay  w-75">
                                                 {{$spell->__get('name')}},
                                                 Level ({{$spell->__get('level')}}),
                                                 Eff: {{$spell->__get('effect')}}
@@ -52,6 +53,10 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <br>
+                <div class="card text-dark">
+                    <h2 class="card-title text-white p-2 title">Traps</h2>
                     <div class="table-responsive">
                         <table class="table">
                             <tbody>
@@ -59,9 +64,9 @@
                                 <td class="">
                                     <a href="{{route('monster', 'trap' , $key)}}">
                                         <div class="imageContainer">
-                                            <img class="align-middle rounded mx-auto d-block"
-                                                 src="https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361513_640.jpg" alt="">
-                                            <p class="overlay w-100">
+                                            <img class="rounded width"
+                                                 src="{{$trap->__get('imgPath')}}" alt="">
+                                            <p class="overlay  w-75">
                                                 {{$trap->__get('name')}},
                                                 Level ({{$trap->__get('level')}}),
                                                 Eff: {{$trap->__get('effect')}}
