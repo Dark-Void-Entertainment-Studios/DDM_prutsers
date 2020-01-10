@@ -37,7 +37,7 @@ class HomeController extends Controller
     {
         $monsterClasses = ClassFinder::getClassesInNamespace('App\Monsters');
         $spellClasses = ClassFinder::getClassesInNamespace('App\Spells');
-        $trapClasses = ClassFinder::getClassesInNamespace('App\Spells');
+        $trapClasses = ClassFinder::getClassesInNamespace('App\Traps');
         $monsters = [];
         $spells = [];
         $traps = [];

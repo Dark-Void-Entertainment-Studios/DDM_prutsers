@@ -41,11 +41,6 @@
                                     <a href="{{route('monster', 'spell' , $key)}}">
                                         <div class="imageContainer">
                                             <img class="rounded width" src="{{$spell->__get('imgPath')}}" alt="">
-                                            <p class="overlay  w-75">
-                                                {{$spell->__get('name')}},
-                                                Level ({{$spell->__get('level')}}),
-                                                Eff: {{$spell->__get('effect')}}
-                                            </p>
                                         </div>
                                     </a>
                                 </td>
@@ -64,13 +59,7 @@
                                 <td class="">
                                     <a href="{{route('monster', 'trap' , $key)}}">
                                         <div class="imageContainer">
-                                            <img class="rounded width"
-                                                 src="{{$trap->__get('imgPath')}}" alt="">
-                                            <p class="overlay  w-75">
-                                                {{$trap->__get('name')}},
-                                                Level ({{$trap->__get('level')}}),
-                                                Eff: {{$trap->__get('effect')}}
-                                            </p>
+                                            <img class="rounded width" src="{{$trap->__get('imgPath')}}" alt="">
                                         </div>
                                     </a>
                                 </td>
