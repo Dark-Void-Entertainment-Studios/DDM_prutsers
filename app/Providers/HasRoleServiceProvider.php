@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Http\Middleware\HasRole;
+use GuzzleHttp\Middleware;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,8 +27,8 @@ class HasRoleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::directive("hasRole", function ($test) {
-            return "<?php echo 'test'; ?>";
+        Blade::if("hasRole", function () {
+            return Auth::user()->getRole->role;
         });
     }
 }

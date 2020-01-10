@@ -4,21 +4,22 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">admin board</div>
+                    <div class="card-header text-black-50">admin board</div>
                     <div class="card-body">
-                        <table width="100%">
-                            <tr>
+                        <table width="100%" class="table">
+                            <tr class="thead-dark">
                                 <th>user</th>
                                 <th>status</th>
                                 <th>role</th>
+                                <th class="align-content-center">edit</th>
                             </tr>
                             @foreach($users as $user)
                                 <tr>
                                     <th>{{$user->name}}</th>
                                     <th>W.I.P</th>
                                     <th>{{$user->getRole->role}}</th>
-                                    @if($user->HasNotrole('Super Admin'))
-                                        @if($user->getRole->role == "Basic")
+                                    @hasRole("Super Admin")
+                                        @hasRole("basic")
                                             <th>
                                                 <form action="{{route('makeAdmin', $user->id)}}" method="post">
                                                     {{ csrf_field() }}
@@ -38,8 +39,8 @@
                                                     </div>
                                                 </form>
                                             </th>
-                                        @endif
-                                    @endif
+                                        @endhasRole
+                                    @endhasRole
                                 </tr>
                             @endforeach
                         </table>
@@ -48,5 +49,4 @@
             </div>
         </div>
     </div>
-@ajax()
 @endsection
