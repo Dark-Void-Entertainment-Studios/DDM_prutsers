@@ -25,14 +25,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $json = file_get_contents('version.json');
+        $data = json_decode($json, True);
+        $data = $data["version"];
+        return view('home', [
+            'data' => $data,
+        ]);
     }
 
     public function monsters()
     {
         $monsterClasses = ClassFinder::getClassesInNamespace('App\Monsters');
         $spellClasses = ClassFinder::getClassesInNamespace('App\Spells');
-        $trapClasses = ClassFinder::getClassesInNamespace('App\Spells');
+        $trapClasses = ClassFinder::getClassesInNamespace('App\Traps');
         $monsters = [];
         $spells = [];
         $traps = [];

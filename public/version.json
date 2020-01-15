@@ -1,0 +1,22 @@
+{
+   "version": [
+      {
+         "tag": "0.2.0",
+         "changes": "test"
+      },
+
+      {
+         "tag": "0.3.0",
+         "changes": "test"
+      },
+
+      {
+         "tag": "0.3.1",
+         "changes": "test"
+      },
+      {
+         "tag": "0.4.0",
+         "changes": "test"
+      }
+   ]
+} 

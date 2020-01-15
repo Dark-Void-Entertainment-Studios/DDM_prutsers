@@ -15,6 +15,6 @@ class AloreParfum extends Card
 {
     public function __construct()
     {
-        parent::__construct("Alore Parfum", 3, 'target one of your monsters your opponents monsters can only attack that monster');
+        parent::__construct("Alore Perfume", 3, 'target one of your monsters your opponents monsters can only attack that monster');
     }
 }
