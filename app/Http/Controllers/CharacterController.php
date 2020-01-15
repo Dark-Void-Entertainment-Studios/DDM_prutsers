@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use auth;
 use App\Game;
 use Session;
-
+use App\boardcreation\board;
 
 class CharacterController extends Controller
 {
@@ -19,7 +19,7 @@ class CharacterController extends Controller
      */
     public function index(Request $request)
     {
-        dd($request);
+        // dd($request->time);
         $id = auth::id();
         $board = new DDM($request);
         $board->startGame($request, $boardSize, $obstacles, $id, $time);
@@ -29,9 +29,10 @@ class CharacterController extends Controller
 
         foreach ($characterClasses as $character) {
             $a = new $character;
+ 
             array_push($characters, $a);
         }
 
-        // return view('characters', compact('characters'));
+        return view('characters', compact('characters'));
     }
 }
