@@ -17,4 +17,6 @@
         </aside>
     </div>
 </div>
+<p id="Tp">tijdelijke p</p>
+<button id="Tbtn">tijdelijke button!</button>
 @endsection

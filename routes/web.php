@@ -26,9 +26,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/user', 'UserController@index');
+    Route::get('/monsterName', 'GameController@getName');
     Route::get('/board', 'GameController@index');
     Route::get('/lobby', 'LobbyController@index');
-    Route::get('/characters', 'CharacterController@index');
+    Route::post('/characters', 'CharacterController@index');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth','HasRole:Admin,Super Admin']], function(){

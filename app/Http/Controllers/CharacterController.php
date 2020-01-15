@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use HaydenPierce\ClassFinder\ClassFinder;
+use App\Game\DDM;
 use Illuminate\Http\Request;
+use auth;
 use App\Game;
 use Session;
 
@@ -15,8 +17,13 @@ class CharacterController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
+        dd($request);
+        $id = auth::id();
+        $board = new DDM($request);
+        $board->startGame($request, $boardSize, $obstacles, $id, $time);
+
         $characterClasses = ClassFinder::getClassesInNamespace('App\Characters');
         $characters = [];
 
@@ -25,6 +32,6 @@ class CharacterController extends Controller
             array_push($characters, $a);
         }
 
-        return view('characters', compact('characters'));
+        // return view('characters', compact('characters'));
     }
 }

@@ -9,27 +9,27 @@ use App\Monster;
 
 class DDM
 {
-    private $info = [];
-    private $boardOptions = [];
+    private $info;
+    private $charactor;
+    private $boardSize;
+    private $turn;
+    private $obst;
+    private $player;
+    private $SID;
+    private $time;
+
 
     public function __construct($request)
     {
-        if($request->session()->has('ongoingGame')){
-            $this->info = $request->session()->get('ongoingGame');
+        if($request->session()->has('Game')){
+            $this->info = $request->session()->get('Game');
         } else {
             $this->info = NULL;
         }
     }
-    public function startGame($request, $charactor, $player, $id)
+    public function startGame($request, $boardSize, $obst, $id, $time)
     {
-        if(empty($this->info[$id]))
-        {
-            $this->info[$id] = ['player' => $player, 'charactor' => $charactor];
-        } 
-        else
-        {
-            $this->info = NULL;
-        }
+        $this->info = [$boardSize, $obst, $id];
         $this->saveGame($request);
     }
     private function saveGame($request)
