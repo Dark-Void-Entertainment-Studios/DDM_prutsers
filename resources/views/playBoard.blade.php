@@ -13,7 +13,7 @@
                 @foreach($board->getMatrix() as $rowKey => $row)
                     <div class="row" id="row_{{$rowKey}}">
                         @foreach($row as $tileKey => $tile)
-                            <a class="square" id="square_{{$rowKey}}_{{$tileKey}}" onclick="selectTile()" ></a>
+                            <a class="boardSquare" id="square_{{$rowKey}}_{{$tileKey}}" onclick="selectTile()" ></a>
                         @endforeach
                     </div>
                 @endforeach
