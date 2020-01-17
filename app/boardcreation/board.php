@@ -2,7 +2,6 @@
 
 namespace App\boardcreation;
 
-use App\boardcreation\Tile;
 
 class board
 {
@@ -11,17 +10,23 @@ class board
     public function __construct()
     {
         $size = 0;
+        $measurement = null;
+
         if ($size == 1) {
-            $megerment = [26, 19];
+            $measurement = [26, 19];
         } else {
-            $megerment = [13, 19];
+            $measurement = [13, 19];
         }
-        for ($i = 0; $i < $megerment[0]; $i++) {
-            $boardMatrix[$i] = [];
-            for ($y = 0; $y < $megerment[1]; $y++) {
-                $boardMatrix[$i][$y] = new Tile();
+        for ($i = 0; $i < $measurement[0]; $i++) {
+            $this->boardMatrix[$i] = [];
+            for ($y = 0; $y < $measurement[1]; $y++) {
+                $this->boardMatrix[$i][$y] = new Tile(false, false, "free");
             }
         }
-        dd($boardMatrix);
+    }
+
+    public function getMatrix()
+    {
+        return $this->boardMatrix;
     }
 }
