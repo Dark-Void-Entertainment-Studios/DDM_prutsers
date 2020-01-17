@@ -3,7 +3,7 @@
 namespace App\boardcreation;
 
 
-class board
+class Board
 {
     private $boardMatrix;
 

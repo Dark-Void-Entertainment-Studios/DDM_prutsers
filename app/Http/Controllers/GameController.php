@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\boardcreation\board;
+use App\boardcreation\Board;
 use Illuminate\Http\Request;
 use App\Game\DDM;
 use App\Personas;
@@ -19,7 +19,7 @@ class GameController extends Controller
     public function index(Request $request)
     {
         $DDM = new DDM($request);
-        $board = new board;
+        $board = new Board;
         return view('playBoard', compact('board'));
     }
 }

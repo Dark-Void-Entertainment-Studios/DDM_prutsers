@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 use HaydenPierce\ClassFinder\ClassFinder;
 use App\Game\DDM;
 use Illuminate\Http\Request;
-use auth;
 use App\Game;
-use Session;
-use App\boardcreation\board;
+use Illuminate\Support\Facades\Auth;
 
 class CharacterController extends Controller
 {
