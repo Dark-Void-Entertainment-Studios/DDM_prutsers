@@ -1,9 +1,9 @@
 <?php 
 
 namespace App\boardcreation\obsticlas;
-use App\boardcreation\boardspeaces;
+use App\boardcreation\boardSpaces;
 
-class obsticlas
+class Obsticlas
 {
     private $img;
     

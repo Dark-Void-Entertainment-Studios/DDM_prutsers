@@ -1,9 +1,9 @@
 <?php
 
-namespace App\boardcreation;
-use App\boardcreation\boardspeaces;
+namespace App\boardCreation;
+use App\boardcreation\boardSpaces;
 
-class board
+class Board
 {
     private $boardMatrix;
 
@@ -11,13 +11,14 @@ class board
     {
         $size = 0;
         if ($size == 1) {
-            $megerment = [26, 19];
+            $measurement = [26, 19];
         } else {
-            $megerment = [13, 19];
+            $measurement = [13, 19];
         }
-        for ($i=0; $i < $megerment[0]; $i++) { 
+        // put for loops in new function!
+        for ($i=0; $i < $measurement[0]; $i++) { 
             $boardMatrix[$i] = [];
-            for ($y=0; $y < $megerment[1]; $y++) { 
+            for ($y=0; $y < $measurement[1]; $y++) { 
                 $boardMatrix[$i][$y] = [];
             }
         }

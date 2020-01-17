@@ -1,9 +1,9 @@
 <?php
 
-namespace App\boardcreation\boardspeaces;
+namespace App\boardcreation\boardSpaces;
 use App\boardcreation\board;
 
-class boardspeaces extends board 
+class BoardSpaces extends Board 
 {
     private $obsticlas;
     private $condisions;
