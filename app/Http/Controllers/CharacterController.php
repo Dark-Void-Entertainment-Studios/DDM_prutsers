@@ -19,10 +19,9 @@ class CharacterController extends Controller
      */
     public function index(Request $request)
     {
-        // dd($request->time);
         $id = auth::id();
         $board = new DDM($request);
-        $board->startGame($request, $boardSize, $obstacles, $id, $time);
+        $board->startGame($request);
 
         $characterClasses = ClassFinder::getClassesInNamespace('App\Characters');
         $characters = [];

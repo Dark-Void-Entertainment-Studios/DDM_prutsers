@@ -17,10 +17,12 @@
             <h3>create</h3>
             <p>options:</p>
                 <div class="form-check">
+                    <input type="hidden" name="boardSize" value="0">
                     <input class="btn btn-default" type="checkbox" name="boardSize" value="1">
                     <label for="board">big board</label>
                 </div>
                 <div class="form-check">
+                    <input type="hidden" name="obstacles" value="0">
                     <input class="btn btn-default" type="checkbox" name="obstacles" value="1">
                     <label for="board">obstacles</label>
                 </div>

@@ -1,7 +1,8 @@
 <?php
 
 namespace App\boardcreation;
-use App\boardcreation\boardspeaces;
+
+use App\boardcreation\Tile;
 
 class board
 {
@@ -15,10 +16,10 @@ class board
         } else {
             $megerment = [13, 19];
         }
-        for ($i=0; $i < $megerment[0]; $i++) { 
+        for ($i = 0; $i < $megerment[0]; $i++) {
             $boardMatrix[$i] = [];
-            for ($y=0; $y < $megerment[1]; $y++) { 
-                $boardMatrix[$i][$y] = [];
+            for ($y = 0; $y < $megerment[1]; $y++) {
+                $boardMatrix[$i][$y] = new Tile();
             }
         }
         dd($boardMatrix);
