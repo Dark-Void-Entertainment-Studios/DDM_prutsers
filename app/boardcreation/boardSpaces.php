@@ -1,7 +1,7 @@
 <?php
 
-namespace App\boardcreation\boardSpaces;
-use App\boardcreation\board;
+namespace App\boardCreation\boardSpaces;
+use App\boardCreation\board;
 
 class BoardSpaces extends Board 
 {

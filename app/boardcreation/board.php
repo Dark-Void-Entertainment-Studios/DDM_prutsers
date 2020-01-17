@@ -1,7 +1,7 @@
 <?php
 
 namespace App\boardCreation;
-use App\boardcreation\boardSpaces;
+use App\boardCreation\boardSpaces;
 
 class Board
 {
@@ -15,7 +15,11 @@ class Board
         } else {
             $measurement = [13, 19];
         }
-        // put for loops in new function!
+        $this->boardCreation($measurement);
+    }
+
+    public function boardCreation($measurement)
+    {
         for ($i=0; $i < $measurement[0]; $i++) { 
             $boardMatrix[$i] = [];
             for ($y=0; $y < $measurement[1]; $y++) { 
