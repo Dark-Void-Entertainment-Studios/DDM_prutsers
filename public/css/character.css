@@ -1,9 +1,17 @@
 .imageContainer {
   position: relative;
-  width: 50%;
-  max-width: 172px;
+  width: 100%;
   padding: 0%;
   display: inline-block;
+}
+
+.title {
+  font-family: 'Bangers', cursive;
+  text-align: center;
+}
+
+.width {
+  width: 300px;
 }
 
 .image {
@@ -36,4 +44,19 @@
   width: 300px;
   margin: auto;
   font-family: "comic sans MS";
+}
+
+.player1 {
+  border: 2px solid lightblue;
+}
+
+.player2 {
+  border: 2px solid red;
+}
+
+.playerBoth {
+  border-top: 2px solid lightblue;
+  border-left: 2px solid lightblue;
+  border-bottom: 2px solid red;
+  border-right: 2px solid red;
 }

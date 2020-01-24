@@ -27,9 +27,9 @@ class DDM
             $this->info = NULL;
         }
     }
-    public function startGame($request, $boardSize, $obst, $id, $time)
+    public function startGame($request)
     {
-        $this->info = [$boardSize, $obst, $id];
+        $this->info = ["size" => $request->boardSize, "obstacles" => $request->obstacles, "time" => $request->time];
         $this->saveGame($request);
     }
     private function saveGame($request)

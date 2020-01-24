@@ -2,6 +2,7 @@
 
 namespace App;
 
+
 class Monster
 {
     private $name;
@@ -12,7 +13,7 @@ class Monster
     private $effect;
     private $imgPath;
 
-    public function __construct($name, $level, $atk, $def, $hp, $effect = "N/A")
+    public function __construct($name, $level, $atk = 0, $def = 0, $hp = 0, $effect = "N/A")
     {
        $this->name = $name;
        $this->level = $level;
@@ -20,14 +21,18 @@ class Monster
        $this->def = $def;
        $this->hp = $hp;
        $this->effect = $effect;
-       $name = str_replace(" ", "", $name);
-       $name = str_replace("#1", "", $name);
-       $this->imgPath = "img/". $name . ".png" ;
+       $this->setImage($name);
     }
 
     public function __get($item)
     {
        return $this->$item;
+    }
+
+    private function setImage($name) {
+        $name = str_replace(" ", "", $name);
+        $name = str_replace("#1", "", $name);
+        $this->imgPath = "img/". $name . ".png" ;
     }
 
     public function attacked($dam) {
