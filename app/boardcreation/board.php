@@ -26,6 +26,5 @@ class Board
                 $boardMatrix[$i][$y] = [];
             }
         }
-        dd($boardMatrix);
     }
 }
