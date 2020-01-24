@@ -5,42 +5,24 @@ namespace App\boardcreation;
 
 class Tile
 {
-    private $status = [];
-    private $monster;
+    private $place;
+    private $obsticlas;
+    private $condisions;
 
-
-    /**
-     * tile constructor.
-     * @param bool $obstacle
-     * @param bool $dungeon
-     * @param string $status
-     * @param bool $monster
-     */
-    public function __construct($obstacle, $dungeon, $status, &$monster = null)
+    public function __constuct($place, $condisions, $obsticlas = NULL)
     {
-
-        $temp = func_get_args();
-        if (isset($temp)) {
-            $this->setStatus($temp);
-        }
-
-        $this->checkMonster($monster);
+        $this->place = $place;
+        $this->obsticlas = $obsticlas;
+        $this->condisions = $condisions;
     }
 
-    /**
-     * @param $conditions
-     */
-    private function setStatus($conditions)
+    public function __get($item)
     {
-        foreach ($conditions as $key => $condition) {
-            array_push($this->status, [$key => $condition]);
-        }
+        return $this->$item;
     }
 
-    public function checkMonster(&$monster)
+    public function changecond($condisions)
     {
-        if (isset($monster)) {
-            $this->monster = $monster;
-        }
+        $this->condisions = $condisions;
     }
 }

@@ -10,6 +10,7 @@ class Board
     public function __construct()
     {
         $size = 0;
+        dd(session());
         $measurement = null;
 
         if ($size == 1) {
@@ -20,7 +21,11 @@ class Board
         for ($i = 0; $i < $measurement[0]; $i++) {
             $this->boardMatrix[$i] = [];
             for ($y = 0; $y < $measurement[1]; $y++) {
-                $this->boardMatrix[$i][$y] = new Tile(false, false, "free");
+                if ($) {
+                    //
+                } else {
+                    $this->boardMatrix[$i][$y] = new Tile([$i, $y], null);
+                }
             }
         }
     }
